@@ -16,7 +16,7 @@ permalink: /contact/
 			<div class="row">
 				<div class="col-md-6">
 					<h3> Sign  Up for Beta</h3>
-					<form action="//formspree.io/your@email.com" method="POST">
+					<form action="//formspree.io/info@myclasstracks.com" method="POST">
 						<input type="text" name="name" placeholder="Your Name">
 						<input type="text" name="_school" placeholder="School, School District, etc" />
 						<input type="text" name="_replyto" placeholder="Your email" />
