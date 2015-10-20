@@ -22,7 +22,7 @@ permalink: /contact/
 						<input type="text" name="_replyto" placeholder="Your email" />
 						<input type="hidden" name="_subject" value="Beta Signup" />
 						<input type="submit" class="cta" value="Send">
-						<input type="hidden" name="_next" value="/sign-up-confirmation.html" />
+						<!--input type="hidden" name="_next" value="/sign-up-confirmation.html" /-->
 						<input type="text" name="_gotcha" style="display:none" />
 					</form>
 				</div>
@@ -35,7 +35,7 @@ permalink: /contact/
 						<input type="hidden" name="_subject" value="New submission!" />
 						<textarea rows="5" name="message" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
 						<input type="submit" class="cta" value="Send">
-						<input type="hidden" name="_next" value="/message-confirmation.html" />
+						<!--input type="hidden" name="_next" value="/message-confirmation.html" /-->
 						<input type="text" name="_gotcha" style="display:none" />
 					</form>
 				</div>
