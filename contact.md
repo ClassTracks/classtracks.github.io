@@ -22,6 +22,7 @@ permalink: /contact/
 						<input type="text" name="_school" placeholder="School, School District, etc" />
 						<input type="text" name="_replyto" placeholder="Your email" />
 						<input type="hidden" name="_subject" value="Beta Signup" />
+						<input type="text" name="_newsletter" placeholder="Would you like occasional updates?" />
 						<input type="submit" class="cta" value="Send">
 						<!--input type="hidden" name="_next" value="/sign-up-confirmation.html" /-->
 						<input type="text" name="_gotcha" style="display:none" />
