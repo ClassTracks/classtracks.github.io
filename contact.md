@@ -16,11 +16,13 @@ permalink: /contact/
 			<div class="row">
 				<div class="col-md-6">
 					<h3> Sign  Up for Beta</h3>
-					<form action="//formspree.io/info@myclasstracks.com" method="POST">
+					<!-- http://stackoverflow.com/questions/11423682/cross-domain-form-posting -->
+					<form action="https://classtracks-staging.herokuapp.com/welcome-beta-user" method="POST">
 						<input type="text" name="name" placeholder="Your Name">
 						<input type="text" name="_school" placeholder="School, School District, etc" />
 						<input type="text" name="_replyto" placeholder="Your email" />
 						<input type="hidden" name="_subject" value="Beta Signup" />
+						<input type="text" name="_newsletter" placeholder="Would you like occasional updates?" />
 						<input type="submit" class="cta" value="Send">
 						<!--input type="hidden" name="_next" value="/sign-up-confirmation.html" /-->
 						<input type="text" name="_gotcha" style="display:none" />
