@@ -817,8 +817,13 @@ pre code {
 .col-md-7 {
     width: 58.33333333%}
 .col-md-6 {
+    width: 50%;}
+/*********************** Overriding Change **********************/
+.col-md-6#contact-redesign {
     width: 50%;
     margin: 0 25%}
+}
+/*********************** Overriding Change **********************/
 .col-md-5 {
     width: 41.66666667%}
 .col-md-4 {

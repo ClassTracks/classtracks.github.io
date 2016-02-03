@@ -14,7 +14,7 @@ permalink: /contact/
 	<div class="container-fluid form">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6" id=contact-redesign>
 					<!-- http://stackoverflow.com/questions/11423682/cross-domain-form-posting -->
 					<form action="https://classtracks-staging.herokuapp.com/welcome-beta-user" method="POST">
 						<input type="text" name="name" placeholder="Your Name">
@@ -22,7 +22,7 @@ permalink: /contact/
 						<input type="text" name="_replyto" placeholder="Your email" />
 						<input type="hidden" name="_subject" value="Beta Signup" />
 						<input type="text" name="_newsletter" placeholder="Would you like occasional updates?" />
-						<input type="submit" class="cta" value="Send">
+                        <input type="submit" class="cta" value="Send">
 						<!--input type="hidden" name="_next" value="/sign-up-confirmation.html" /-->
 						<input type="text" name="_gotcha" style="display:none" />
 					</form>
@@ -31,4 +31,5 @@ permalink: /contact/
 		</div>
 	</div>
 </section>
+
 	
