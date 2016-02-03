@@ -28,19 +28,6 @@ permalink: /contact/
 						<input type="text" name="_gotcha" style="display:none" />
 					</form>
 				</div>
-				<div class="col-md-6">
-					<h3> Send Us A Message</h3>
-					<form action="//formspree.io/info@myclasstracks.com" method="POST">
-						<input type="text" name="name" placeholder="Your Name">
-						<input type="text" name="_school" placeholder="School, School District, etc" />
-						<input type="text" name="_replyto" placeholder="Your email" />
-						<input type="hidden" name="_subject" value="New submission!" />
-						<textarea rows="5" name="message" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
-						<input type="submit" class="cta" value="Send">
-						<!--input type="hidden" name="_next" value="/message-confirmation.html" /-->
-						<input type="text" name="_gotcha" style="display:none" />
-					</form>
-				</div>
 			</div>
 		</div>
 	</div>
