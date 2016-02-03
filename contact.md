@@ -7,7 +7,7 @@ permalink: /contact/
 	<div class="container-fluid hero-title">
 		<div class="col-md-12">
 			<header class="post-header">
-				<h1 class="post-title">Contact Us</h1>
+				<h1 class="post-title">Beta SignUp</h1>
 			</header>
 		</div>
 	</div>
@@ -15,7 +15,6 @@ permalink: /contact/
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<h3> Sign  Up for Beta</h3>
 					<!-- http://stackoverflow.com/questions/11423682/cross-domain-form-posting -->
 					<form action="https://classtracks-staging.herokuapp.com/welcome-beta-user" method="POST">
 						<input type="text" name="name" placeholder="Your Name">
