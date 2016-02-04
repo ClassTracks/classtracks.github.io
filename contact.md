@@ -16,12 +16,12 @@ permalink: /contact/
 			<div class="row">
 				<div class="col-md-6" id="override">
 					<!-- http://stackoverflow.com/questions/11423682/cross-domain-form-posting -->
-					<form action="https://classtracks-staging.herokuapp.com/welcome-beta-user" method="POST">
+					<form action="https://classtracks-staging.herokuapp.com/welcome-beta-user" method="POST" role="form" data-toggle="validator">
 						<input type="text" name="name" placeholder="Your Name">
 						<input type="text" name="_school" placeholder="School, School District, etc" />
-						<input type="text" name="_replyto" placeholder="Your email" />
+						<input type="email" name="_replyto" required placeholder="Your email" data-error="Please enter valid email address!" />
 						<input type="hidden" name="_subject" value="Beta Signup" />
-                            <input type="checkbox" name="_updates_option" id="inline-label" />Please keep me posted on improvements and new features, and other cool happenings at ClassTracks (no more than one update a month).
+                            <input type="checkbox" name="_updates_option" class="inline-label" />Please keep me posted on improvements and new features, and other cool happenings at ClassTracks (no more than one update a month).
                       
                         <input type="submit" class="cta" value="Send">
 						<!--input type="hidden" name="_next" value="/sign-up-confirmation.html" /-->
