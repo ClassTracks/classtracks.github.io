@@ -14,7 +14,7 @@ permalink: /contact/
 	<div class="container-fluid form">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6" id=contact-redesign>
+				<div class="col-md-6" id="override">
 					<!-- http://stackoverflow.com/questions/11423682/cross-domain-form-posting -->
 					<form action="https://classtracks-staging.herokuapp.com/welcome-beta-user" method="POST">
 						<input type="text" name="name" placeholder="Your Name">

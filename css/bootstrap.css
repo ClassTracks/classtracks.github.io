@@ -819,7 +819,7 @@ pre code {
 .col-md-6 {
     width: 50%;}
 /*********************** Overriding Change **********************/
-.col-md-6#contact-redesign {
+#override.col-md-6 {
     width: 50%;
     margin: 0 25%}
 }
