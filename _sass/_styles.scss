@@ -411,6 +411,12 @@ body.legal {
 			&.cta {
 				width: 50%;
 			}
+        }
+        input#inline-label {
+            width: auto;
+            max-height: 20px;
+            max-width: 20px;
+            margin: 4px 15px 4px auto;
 		}
 	}
 }
