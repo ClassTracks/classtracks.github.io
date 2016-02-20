@@ -12,3 +12,5 @@ facebook_username: ClassTracks
 
 # Build settings
 markdown: kramdown
+highlighter: rouge 
+# syntax highlighter for windows substitute for Pygments (jekyll default-requires Python installation) 
