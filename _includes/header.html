@@ -2,7 +2,7 @@
 
   <div class="wrapper">
     <div class="container">
-      <a class="site-title" href="{{ site.baseurl }}/"><img src="/assets/logos/solid-white-transparent.png" alt="{{ site.title }}" title="{{ site.title }}"></a>
+      <a class="site-title" href="{{ site.baseurl }}/"><img src="/assets/logos/solid-white-transparent.png" id="logo" alt="{{ site.title }}" title="{{ site.title }}"></a>
 
       <nav class="site-nav">
         <a href="#" class="menu-icon">
@@ -30,3 +30,10 @@
   </div>
 
 </header>
+
+<script>
+    window.onload = function() {
+        var logo = document.getElementById("logo");
+        TweenLite.from(logo, 4, {opacity:0});
+    }
+</script>
