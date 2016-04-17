@@ -3,31 +3,29 @@
 ---
 @charset "utf-8";
 
-//Fonts
-//@include font-face("Adelle", font-files("/assets/fonts/Adelle/adelle_regular-webfont.eot", "/assets/fonts/Adelle/adelle_regular-webfont.otf"));
 @font-face {
-    font-family:"Adelle-Bold";
-    src: url('/assets/fonts/Adelle/adelle_bold-webfont.eot') format("embedded open type");
-    src: url('/assets/fonts/Adelle/adelle_bold-webfont.ttf') format("truetype");
-    src: url('/assets/fonts/Adelle/adelle_bold-webfont.woff') ;
-    font-weight:normal;
-    font-style:normal;
+  font-family:"Adelle-Bold";
+  src: url('/assets/fonts/Adelle/adelle_bold-webfont.eot') format("embedded open type");
+  src: url('/assets/fonts/Adelle/adelle_bold-webfont.ttf') format("truetype");
+  src: url('/assets/fonts/Adelle/adelle_bold-webfont.woff') ;
+  font-weight:normal;
+  font-style:normal;
 }
 @font-face {
-    font-family:"Adelle-Regular";
-    src: url('/assets/fonts/Adelle/adelle_regular-webfont.eot') format("embedded open type");
-    src: url('/assets/fonts/Adelle/adelle_regular-webfont.ttf') format("truetype");
-    src: url('/assets/fonts/Adelle/adelle_regular-webfont.woff') ;
-    font-weight:normal;
-    font-style:normal;
+  font-family:"Adelle-Regular";
+  src: url('/assets/fonts/Adelle/adelle_regular-webfont.eot') format("embedded open type");
+  src: url('/assets/fonts/Adelle/adelle_regular-webfont.ttf') format("truetype");
+  src: url('/assets/fonts/Adelle/adelle_regular-webfont.woff') ;
+  font-weight:normal;
+  font-style:normal;
 }
 @font-face {
-    font-family:"Adelle-Light";
-    src: url('/assets/fonts/Adelle/adelle_light-webfont.eot') format("embedded open type");
-    src: url('/assets/fonts/Adelle/adelle_light-webfont.ttf') format("truetype");
-    src: url('/assets/fonts/Adelle/adelle_light-webfont.woff') ;
-    font-weight:normal;
-    font-style:normal;
+  font-family:"Adelle-Light";
+  src: url('/assets/fonts/Adelle/adelle_light-webfont.eot') format("embedded open type");
+  src: url('/assets/fonts/Adelle/adelle_light-webfont.ttf') format("truetype");
+  src: url('/assets/fonts/Adelle/adelle_light-webfont.woff') ;
+  font-weight:normal;
+  font-style:normal;
 }
 
 // variables
@@ -40,28 +38,28 @@ $base-line-height: 1.75;
 
 $spacing-unit:     30px;
 
-$white:		    #ffffff;
-$text-color:       #656d78;
+$white: #ffffff;
+$text-color: #656d78;
 $background-color: #fdfdfd;
-$ct-turquoise:     #48CFAD;
+$ct-turquoise: #48CFAD;
 $ct-turquoise-dark: #37BC9B;
-$ct-blue:		    #5D9CEC;
-$ct-blue-dark:	    #4A89DC;
-$ct-red:		    #FB6E51;
-$ct-red-dark:	    #E9573F;
-$ct-yellow:	    #FFCE54; 
-$ct-yellow-dark:   #F5BB42;
+$ct-blue: #5D9CEC;
+$ct-blue-dark: #4A89DC;
+$ct-red: #FB6E51;
+$ct-red-dark: #E9573F;
+$ct-yellow: #FFCE54;
+$ct-yellow-dark: #F5BB42;
 
-$dark-color:       #434A53;
-$grey-color:       #656d78;
+$dark-color: #434A53;
+$grey-color: #656d78;
 $grey-color-light: #e6e9ed;
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark: darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width: 800px;
 
-$on-palm:          748px;
-$on-laptop:        1024px;
+$on-palm: 748px;
+$on-laptop: 1024px;
 
 
 
@@ -73,17 +71,21 @@ $on-laptop:        1024px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
+
+#our-values dd {
+  margin-bottom: 20px;
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting",
-        "styles"
+  "base",
+  "layout",
+  "syntax-highlighting",
+  "styles"
 ;
