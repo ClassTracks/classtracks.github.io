@@ -7,12 +7,17 @@ ClassTracks is a trademarked name and all content, IP, and creative in this repo
 2. `cd classtracks`
 3. `git clone git@github.com:classtracks/classtracks.github.io.git`
 4. `cd vm`
-5. Run
-    * `vagrant up` if it has stopped
-6. `vagrant ssh -c 'cd /classtracks/myclasstracks.com; jekyll serve --host 0.0.0.0'`
-    * Since this command will be used frequently, add this to an aliases file: `alias ctsite='vagrant ssh -c "cd /classtracks/myclasstracks.com; jekyll serve --host 0.0.0.0"'`
-    * Then just run `ctsite` instead
-7. Run `vagrant halt` when you have finished coding for the day
+5. Run `vagrant up` if it has stopped
+
+## Running It
+* Outside the VM
+  1. `cd path/to/classtracks/vm`
+  2. `ctsite`
+    * Be sure to `source` the `aliases.sh` from the [vm](https://bitbucket.org/classtracks/vm) before you do
+* Inside the VM (`vagrant ssh`)
+  1. `cd classtracks/classtracks.github.io`
+  2. `jekyll serve --host 0.0.0.0`
+* Run `vagrant halt` when you have finished coding for the day
 
 ## Deployment
 * On GitHub
