@@ -101,7 +101,8 @@ h2 {
 	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif;
 	font-size: 25px;
 	font-weight: 300;
-	color: $ct-blue;
+	/*color: $ct-blue;*/
+    color: $grey-color;
 	margin:7.5px 0;
 	
 }
@@ -298,6 +299,13 @@ pre {
 			 color: #fff;
 		 }
 	 }
+
+ }
+
+ input:focus {
+    background: $ct-red;
+    border: 1px solid $white;
+    border-bottom: 1px solid $ct-turquoise;
 
  }
 

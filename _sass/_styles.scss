@@ -12,7 +12,7 @@ section .hero-title {
 	/*background-color: $dark-color;*/
 	margin-top:-175px;
     margin-bottom: 25px;
-	padding: 200px 0 75px;
+	padding: 200px 0 0px;
 	text-align: center;
 }
 .post-title {
@@ -42,6 +42,21 @@ p.intro {
 }
 
 /*===============PAGE SPECIFIC STYLES===================*/
+.home {
+	.site-title img {
+		display: none;
+		width:20px;
+		height:20px;
+		box-sizing:border-box;
+		padding-left: 20px;
+		/*width of the image*/
+		background: url('/assets/logos/solid-white-transparent.png') left top no-repeat;
+	}
+	.page-link {
+		color: $white;
+	}
+}
+
 section.homepage {
 	position: relative;
 	z-index: 99;
@@ -51,10 +66,6 @@ section.homepage {
 	}
 	@media screen and (max-width: 600px) {
 		margin-top:0px;
-	}
-
-	.page-link {
-		color: $white;
 	}
 
 	.marquee {
@@ -67,9 +78,10 @@ section.homepage {
 			padding: 55px 15px 0;
 		}
 		.marquee-text {
-			padding-top: 300px;
+			padding-top: 250px;
 			padding-bottom: 90px;
-			max-width: 70%;
+			max-width: 50%;
+			margin-left: 50px;
 			button {
 				font-size: 22px;
 			}
@@ -78,6 +90,7 @@ section.homepage {
 			color: $white;
 			font-weight: 900;
 			font-size: 2.5em;
+			line-height: 1.2;
 		}
 		h2 {
 			color: $white;
@@ -180,8 +193,8 @@ section.homepage {
 		}
 	}
 	#learn-more-summary {
-		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 		background-color: $white;
 		p:first-of-type {
 			text-align: center;
@@ -199,28 +212,18 @@ section.homepage {
 			padding: 1em 0;
 		}
 	}
-	#vision-mission {
-		background: $dark-color;
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		background-position: left;
-		padding: 3.5em 0;
-		.col-centered {
-			text-align: center;
-			p {
-				color: $white;
-				width: 90%;
-				display: block;
-				margin: 10px auto 20px;
-				text-align: left;
-			}
+	#testimonials {
+		padding: 50px;
+		p {
+			max-width: 70%;
+			margin-left: auto;
+			margin-right: auto;
 		}
-		@include media-query($on-palm) {
-			background-size: cover;
-			padding:20px;
-			.col-centered {
-				padding: 10px 0px;
-			}
+		p:last-of-type {
+			text-align: right;
+		}
+		.row {
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -228,7 +231,7 @@ section.homepage {
 .about {
 	.hero-title {
 		margin-top: -175px;
-		padding: 200px 0 75px;
+		padding: 200px 0 0px;
 		text-align: center;
 		/*background: $dark-color;*/
 		.post-title {
@@ -254,14 +257,6 @@ section.homepage {
         h2 {
         	text-align: left;
         	margin-left: 75px;
-        }
-        h2:after {
-            content: '';
-            display: block;
-            height: 1px;
-            width: 10%;
-            margin: 10px auto;
-            background-color: $ct-turquoise;
         }
         &.team-bios {
 	        /*background-color: rgba($grey-color-light, .5)*/
@@ -301,6 +296,7 @@ section.homepage {
 section.how-it-works {
 	.instruction-details {
 		display: inline-block;
+		max-width: 50%;
 	}
 }
 
@@ -310,7 +306,7 @@ body.learn-more {
 	padding-bottom: 0px !important;
 	.hero-title {
 		margin-top: -175px;
-		padding: 200px 0 75px;
+		padding: 200px 0 0px;
 		text-align: center;
 		background: linear-gradient(rgba($dark-color, .25), rgba($dark-color, .5)), url('/assets/imgs/marquees/student-on-laptop.jpg');
 		background-size: 100%;
@@ -395,7 +391,7 @@ body.legal {
 	padding-top:0px;
 	.hero-title {
 		margin-top: -175px;
-		padding: 200px 0 75px;
+		padding: 200px 0 0px;
 		text-align: center;
 		background: $dark-color;
 		background-size: 100%;
