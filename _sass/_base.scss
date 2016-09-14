@@ -85,9 +85,9 @@ li {
  * Headings
  */
 h1 {
-    font-weight: 100;
-    font-family: "Raleway", "Lato", "Helvetica Neue", sans-serif;
-    text-transform: uppercase;
+    /*font-weight: 100;*/
+    font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif;
+    /*text-transform: uppercase;*/
     span.blue {
 	    color: $ct-blue;
 	}
@@ -137,9 +137,9 @@ a {
         text-decoration: none !important;
     }
     &.cta {
-         padding:10px 20px;
+         padding:10px 15px;
 		 background-color: $ct-turquoise;
-		 border-radius: 2px;
+		 border-radius: 30px;
 		 color: #fff;
 		 &.inverse {
 			 background-color: #ffffff;
@@ -157,12 +157,12 @@ a {
  */
  button {
 	 display: inline-block;
-	 padding: 10px 20px;
+	 padding: 5px 20px;
 	 margin: 0 10px;
-	 border: none;
-	 border-radius: 2px;
+	 border: 2px solid $ct-turquoise;
+	 border-radius: 40px;
 	 font-size: 16px;
-	 font-family: 'Adelle-Regular', 'Lato', Helvetica Neue, serif !important;
+	 font-family: 'Lato', Helvetica Neue, serif !important;
 	 font-weight: 500 !important;
 	 &.cta {
 		 background-color: $ct-turquoise;
@@ -172,8 +172,8 @@ a {
 			 a {color: $ct-turquoise;}
 		 }
 		 &:hover {
-			 background-color: $ct-blue-dark;
-			 a {color: #fff;}
+			 background-color: $white;
+			 a {color: $ct-turquoise;}
 		 }
 	 }
  }
@@ -281,7 +281,8 @@ pre {
  input, textarea {
 	 padding: 10px;
 	 vertical-align: top;
-	 border: 1px solid rgba($ct-turquoise, .5);
+     border: 1px solid $white;
+	 border-bottom: 1px solid $grey-color;
 	 box-shadow: none;
 	 &.cta {
 		 background-color: $ct-turquoise;
@@ -299,3 +300,7 @@ pre {
 	 }
 
  }
+
+ textarea {
+        background-color: $grey-color-light;
+     }

@@ -9,7 +9,7 @@ nav.site-nav {
 section .hero-title {
 	background-size: cover !important;
 	background-position: center !important;
-	background-color: $dark-color;
+	/*background-color: $dark-color;*/
 	margin-top:-175px;
     margin-bottom: 25px;
 	padding: 200px 0 75px;
@@ -53,8 +53,12 @@ section.homepage {
 		margin-top:0px;
 	}
 
+	.page-link {
+		color: $white;
+	}
+
 	.marquee {
-		padding: 413px 0 0;
+		/*padding: 413px 0 0;*/
 		background-image:url('/assets/imgs/marquees/teacher-with-student.png');
 		background-size: cover;
 		background-position: center;
@@ -63,7 +67,9 @@ section.homepage {
 			padding: 55px 15px 0;
 		}
 		.marquee-text {
+			padding-top: 300px;
 			padding-bottom: 90px;
+			max-width: 70%;
 			button {
 				font-size: 22px;
 			}
@@ -72,6 +78,13 @@ section.homepage {
 			color: $white;
 			font-weight: 900;
 			font-size: 2.5em;
+		}
+		h2 {
+			color: $white;
+		}
+		p {
+			color: $white;
+			font-size: 1em;
 		}
 		@include media-query($on-palm) {
 			.marquee-text {
@@ -217,7 +230,7 @@ section.homepage {
 		margin-top: -175px;
 		padding: 200px 0 75px;
 		text-align: center;
-		background: $dark-color;
+		/*background: $dark-color;*/
 		.post-title {
 			span.blue {
 				color: $ct-blue;
@@ -238,6 +251,10 @@ section.homepage {
     .row {
         padding: 30px 0;
         text-align: center;
+        h2 {
+        	text-align: left;
+        	margin-left: 75px;
+        }
         h2:after {
             content: '';
             display: block;
@@ -247,7 +264,7 @@ section.homepage {
             background-color: $ct-turquoise;
         }
         &.team-bios {
-	        background-color: rgba($grey-color-light, .5)
+	        /*background-color: rgba($grey-color-light, .5)*/
         }
         &.achievements {
 	        background-color: $grey-color-light;
@@ -278,6 +295,13 @@ section.homepage {
                 color: $white;
             }
 
+}
+
+//how it works
+section.how-it-works {
+	.instruction-details {
+		display: inline-block;
+	}
 }
 
 //learn More Page
@@ -408,7 +432,35 @@ body.legal {
 			font-size: 18px;
 			padding: 15px 0;
 			margin-bottom: 30px;
-			border-bottom: 1px solid $grey-color-light;
+			border: 1px solid $grey-color-light;
+		}
+		input, textarea {
+			width:100%;
+			margin-bottom: 25px;
+			&.cta {
+				width: 50%;
+                margin-top: 25px;
+			}
+        }
+        input.inline-label {
+            width: auto;
+            margin: 4px 15px 4px auto;
+		}
+	}
+}
+//Work With Us
+.work-with-us {
+	.form {
+		background: $white;
+		.col-md-6 {
+			padding: 0 5%;
+		}
+		h3 {
+			color: $ct-blue;
+			font-size: 18px;
+			padding: 15px 0;
+			margin-bottom: 30px;
+			border: 1px solid $grey-color-light;
 		}
 		input, textarea {
 			width:100%;
