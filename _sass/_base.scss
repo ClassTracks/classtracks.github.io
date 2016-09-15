@@ -165,17 +165,19 @@ a {
 	 font-size: 16px;
 	 font-family: 'Lato', Helvetica Neue, serif !important;
 	 font-weight: 500 !important;
+     background-color: $ct-turquoise;
+     color: $white;
+     &:hover {
+             opacity: 0.75;
+         }
 	 &.cta {
-		 background-color: $ct-turquoise;
+		 
 		 a {color: #fff;}
 		 &.inverse {
 			 background-color: #ffffff;
 			 a {color: $ct-turquoise;}
 		 }
-		 &:hover {
-			 background-color: $white;
-			 a {color: $ct-turquoise;}
-		 }
+		 
 	 }
  }
 
@@ -302,12 +304,15 @@ pre {
 
  }
 
- input:focus {
-    background: $ct-red;
-    border: 1px solid $white;
-    border-bottom: 1px solid $ct-turquoise;
+ input, textarea {
+    &:focus {
+        outline: none;
+        border: 1px solid $white;
+        border-bottom: 1px solid $ct-turquoise;
+    }
 
  }
+
 
  textarea {
         background-color: $grey-color-light;

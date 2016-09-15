@@ -294,10 +294,13 @@ section.homepage {
 
 //how it works
 section.how-it-works {
-	.instruction-details {
+	.instruction-step {
+		display: inline-flex;
+	}
+	/*.instruction-details {
 		display: inline-block;
 		max-width: 50%;
-	}
+	}*/
 }
 
 //learn More Page
@@ -442,12 +445,30 @@ body.legal {
             width: auto;
             margin: 4px 15px 4px auto;
 		}
+		button {
+			background-color: $ct-turquoise;
+			color: $white;
+			&:hover {
+				opacity:0.75;
+			}
+		}
 	}
+}
+//FAQs
+.faq {
+	.question {
+		padding-left: 100px;
+		padding-right: 100px;
+		margin-bottom: 100px;
+	}
+
 }
 //Work With Us
 .work-with-us {
 	.form {
 		background: $white;
+		margin-top: 50px;
+		margin-bottom: 50px;
 		.col-md-6 {
 			padding: 0 5%;
 		}
@@ -469,6 +490,9 @@ body.legal {
         input.inline-label {
             width: auto;
             margin: 4px 15px 4px auto;
+		}
+		button {
+			color: $white;
 		}
 	}
 }
