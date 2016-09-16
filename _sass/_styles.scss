@@ -54,6 +54,10 @@ p.intro {
 	}
 	.page-link {
 		color: $white;
+		font-weight: 400;
+		&.cta {
+			border: none;
+		}
 	}
 }
 
@@ -84,6 +88,7 @@ section.homepage {
 			margin-left: 50px;
 			button {
 				font-size: 22px;
+				color: $white;
 			}
 		}
 		h1 {
@@ -204,7 +209,10 @@ section.homepage {
 			color: $ct-yellow-dark;
 			font-size:50px;
 		}
-		h2 {
+		h2:first-of-type {
+			margin-bottom: 40px;
+		}
+		h2.center {
 			text-align: center;
 		}
 		.row.row-centered {
@@ -214,6 +222,7 @@ section.homepage {
 	}
 	#testimonials {
 		padding: 50px;
+		padding-top: 20px;
 		p {
 			max-width: 70%;
 			margin-left: auto;
@@ -224,6 +233,14 @@ section.homepage {
 		}
 		.row {
 			margin-bottom: 30px;
+		}
+		h2 {
+			margin-bottom: 30px;
+		}
+	}
+	#awards {
+		.col-sm-4 {
+			text-align: center;
 		}
 	}
 }
@@ -262,7 +279,7 @@ section.homepage {
 	        /*background-color: rgba($grey-color-light, .5)*/
         }
         &.achievements {
-	        background-color: $grey-color-light;
+	        /*background-color: $grey-color-light;*/
 	        p {
 		        font-size:12px;
 		        margin-top: -15px;
@@ -283,24 +300,83 @@ section.homepage {
 	         text-align: left;
          }
     }
-    .team.founders .col-md-4 h3 {
+    /*.team.founders .col-md-4 h3 {
                 position: relative;
                 bottom: 75px;
                 text-align: center;
                 color: $white;
-            }
+            }*/
+    .headshot {
+    	position: relative;
+    	height: 300px;
+    	width: 300px;
+    	overflow: hidden;
+    }
+    .bio {
+    	width: 300px;
+    	height: 300px;
+    	padding: 5px;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    	position: absolute;
+    	top: 0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	background: $ct-turquoise;
+    	color: #fff;
+
+    	visibility: hidden;
+    	opacity: 0;
+    	
+    }
+    .headshot:hover .bio {
+    	visibility: visible;
+    	opacity: 0.9;
+    	-webkit-transition: visibility opacity 0.2s;
+    }
+    .scroll-wrap {
+    	height: 400px;
+    	width:100%;
+    	background-color: $ct-red;
+    	overflow-x: scroll;
+    	overflow-y: hidden;
+    }
 
 }
 
 //how it works
 section.how-it-works {
-	.instruction-step {
-		display: inline-flex;
+	.row {
+		margin-bottom: 100px;
 	}
-	/*.instruction-details {
+	.instruction-details {
 		display: inline-block;
-		max-width: 50%;
-	}*/
+		&.left {
+			float: left;
+			max-width: 40%;
+		}
+		&.right {
+			float: right;
+			/*border: 10px solid $grey-color-light;
+			border-radius: 5px;*/
+		}
+	}
+	.cta {
+		margin-top: 50px;
+		text-align: center;
+
+		button {
+			color: white;
+		}
+	}
+	@include media-query($on-palm) {
+		.instruction-details {
+			&.left {
+				max-width: 100%;
+			}
+		}
+	}
 }
 
 //learn More Page
@@ -421,8 +497,12 @@ body.legal {
 }
 //Contact Us Page
 .contact-us {
+	h2 {
+		text-align: center;
+	}
 	.form {
 		background: $white;
+		margin-bottom: 50px;
 		.col-md-6 {
 			padding: 0 5%;
 		}
@@ -459,7 +539,15 @@ body.legal {
 	.question {
 		padding-left: 100px;
 		padding-right: 100px;
-		margin-bottom: 100px;
+	}
+	.row {
+		margin-bottom: 50px;
+	}
+	.cta {
+		text-align: center;
+		button {
+			color: $white;
+		}
 	}
 
 }
@@ -494,5 +582,9 @@ body.legal {
 		button {
 			color: $white;
 		}
+	}
+	.content {
+		padding-left: 100px;
+		padding-right: 100px;
 	}
 }

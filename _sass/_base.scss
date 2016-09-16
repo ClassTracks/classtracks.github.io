@@ -88,6 +88,7 @@ h1 {
     /*font-weight: 100;*/
     font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif;
     /*text-transform: uppercase;*/
+    color: $ct-grey-3;
     span.blue {
 	    color: $ct-blue;
 	}
@@ -99,10 +100,10 @@ h1 {
 }
 h2 {
 	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif;
-	font-size: 25px;
+	font-size: 2.5em;
 	font-weight: 300;
 	/*color: $ct-blue;*/
-    color: $grey-color;
+    color: $ct-grey-3;
 	margin:7.5px 0;
 	
 }
@@ -110,14 +111,14 @@ h3 {
 	font-family: "Adelle-Regular", "Lato", "Helvetica Neue", sans-serif; 
 	font-size: 18px; 
 	font-weight: 200;
-	color: #616973;
+	color: #ct-grey-3;
 	margin: 5px 0;
 }
 h4 {
 	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif; 
 	font-size: 17px; 
 	font-weight: 700;
-	color: #616973;
+	color: #ct-grey-3;
 	margin: 5px 0;
 }
 
@@ -134,12 +135,14 @@ a {
     }
 
     &:hover {
-        color: darken($ct-turquoise, 15%);
+        /*color: darken($ct-turquoise, 15%);*/
+        opacity: 0.75;
         text-decoration: none !important;
     }
     &.cta {
          padding:10px 15px;
 		 background-color: $ct-turquoise;
+         border: 1px solid $ct-turquoise;
 		 border-radius: 30px;
 		 color: #fff;
 		 &.inverse {
@@ -147,8 +150,7 @@ a {
 			 color: $ct-turquoise;
 		 }
 		 &:hover {
-			 background-color: $ct-blue-dark;
-			 color: #fff;
+			 opacity: 0.75;
 		 }
 	 }
 }

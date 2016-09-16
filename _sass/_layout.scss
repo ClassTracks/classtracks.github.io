@@ -54,9 +54,17 @@
     .page-link {
 	   font-family: $body-font;
        text-transform: uppercase;
-        color: $grey-color;
+       font-weight: 400;
+        color: $ct-grey-3;
         line-height: $base-line-height;
         /*padding: 10px;*/
+        &.cta {
+            color: $white;
+            &.inverse {
+                color: $ct-turquoise;
+                border: 1px solid $ct-turquoise;
+            }
+        }
         &:hover {
             /*padding-bottom:0px;*/
             border-bottom: 1px solid $ct-turquoise;
@@ -139,6 +147,7 @@
  */
 .site-footer {;
     padding: $spacing-unit 0 0;
+    padding-bottom: $spacing-unit;
     background: $ct-turquoise;
     position: relative;
     bottom:0;
@@ -153,6 +162,9 @@
                     margin-left: 10px;
                 }
         }
+    }
+    a {
+        color: $white;
     }
     a:hover {
         opacity: 0.7;
@@ -171,7 +183,7 @@
     list-style: none;
     margin-left: 0;
     li a {
-        color: $grey-color-light;
+        color: $white;
     }
 }
 .site-footer ul.footer-buttons {
@@ -274,7 +286,7 @@
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 4em;
     letter-spacing: -1px;
     line-height: 1;
 
