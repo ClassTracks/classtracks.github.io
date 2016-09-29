@@ -44,7 +44,7 @@ p.intro {
 /*===============PAGE SPECIFIC STYLES===================*/
 .home {
 	/*.site-header {
-		background: none;
+		background-color: rgba(255,255,255,0.5);
 	}
 	.page-link {
 		color: $white;
@@ -53,13 +53,14 @@ p.intro {
 			border: none;
 		}
 	}*/
+	margin-top: 240px;
 }
 
 section.homepage {
 	position: relative;
 	z-index: 99;
 	margin-top:-175px;
-	@include media-query($on-laptop) {
+	@include media-query($on-palm) {
 		margin-top: -220px;
 	}
 	@media screen and (max-width: 600px) {
@@ -67,7 +68,6 @@ section.homepage {
 	}
 
 	.marquee {
-		/*padding: 413px 0 0;*/
 		background-image:url('/assets/imgs/marquees/teacher-with-student.png');
 		background-size: cover;
 		background-position: center;
@@ -290,7 +290,6 @@ section.homepage {
 		margin-top: -175px;
 		padding: 200px 0 0px;
 		text-align: center;
-		/*background: $dark-color;*/
 		.post-title {
 			span.blue {
 				color: $ct-blue;
@@ -315,11 +314,7 @@ section.homepage {
         	text-align: left;
         	margin-left: 75px;
         }
-        &.team-bios {
-	        /*background-color: rgba($grey-color-light, .5)*/
-        }
         &.achievements {
-	        /*background-color: $grey-color-light;*/
 	        padding-top: 20px;
 	        margin-bottom: 50px;
 	        p {
@@ -375,12 +370,6 @@ section.homepage {
     	margin-left: auto;
     	margin-right: auto;
     }
-    /*.team.founders .col-md-4 h3 {
-                position: relative;
-                bottom: 75px;
-                text-align: center;
-                color: $white;
-            }*/
     .headshot {
     	position: relative;
     	height: 300px;
@@ -445,6 +434,12 @@ section.how-it-works {
 		font-weight: 700;
 		line-height: 1.25;
 	}
+	a {
+		color: $ct-turquoise;
+		&:hover {
+			opacity:0.7;
+		}
+	}
 	.instruction-details {
 		display: inline-block;
 		&.left {
@@ -505,95 +500,6 @@ section.how-it-works {
 		font-weight: 400;
 	}
 }
-
-/*
-//learn More Page
-body.learn-more {
-	padding-top:0px;
-	padding-bottom: 0px !important;
-	.hero-title {
-		margin-top: -175px;
-		padding: 200px 0 0px;
-		text-align: center;
-		background: linear-gradient(rgba($dark-color, .25), rgba($dark-color, .5)), url('/assets/imgs/marquees/student-on-laptop.jpg');
-		background-size: 100%;
-		background-position: center;
-		.post-title {
-			span.blue {
-				color: $ct-blue;
-			}
-			span.turq {
-				color: $ct-turquoise;
-			}
-		}
-	}
-	.post .container:first-child {
-		width: 100% !important;
-	}
-	.post-content {
-		margin-bottom: 0px;
-		h2 {
-			text-align: center;
-			&:after {
-				content: '';
-				display: block;
-				height: 1px;
-				width: 10%;
-				margin: 10px auto;
-				background-color: #48CFAD;
-			}
-		}
-	}
-	#tabs {
-		ul.ui-tabs-nav {
-			padding: 0;
-			margin: 0;
-			background-color: $grey-color-light;
-			text-align: center;
-
-			li {
-				display: inline-block;
-				width: 16%;
-				text-align: center;
-				border-right: 1px solid rgba($white, .5);
-				a {
-					font-weight: 500;
-					color: $ct-turquoise;
-					display: block;
-					padding: 20px 0;
-				}
-				&:last-child {
-					border-right: none;
-				}
-				&.ui-state-active, &:hover {
-					border-bottom: 2px solid $ct-blue;
-					a {
-						color: $ct-blue;
-					}
-				}
-			}
-		}
-		.tab-content {
-			padding: 1.5em 0 3.5em;
-			ul {
-				padding: 0;
-			}
-		}
-	}
-	@include media-query($on-palm) {
-		.hero-title {
-			margin-top: 0px;
-			padding: 75px 0;
-			background-size: cover;
-		}
-		#tabs ul.ui-tabs-nav {
-			li {
-				width: 100% !important;
-			}
-		}
-	}
-}
-*/
 //Legal
 body.legal {
 	padding-top:0px;
@@ -686,6 +592,64 @@ body.legal {
 }
 //Work With Us
 .work-with-us {
+	.form {
+		background: $white;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		text-align: center;
+		.col-md-6 {
+			padding: 0 5%;
+		}
+		h3 {
+			color: $ct-blue;
+			font-size: 18px;
+			padding: 15px 0;
+			margin-bottom: 30px;
+			border: 1px solid $ct-grey-3;
+		}
+		input, textarea {
+			width:100%;
+			margin-bottom: 25px;
+			&.cta {
+				width: 50%;
+                margin-top: 25px;
+			}
+        }
+        input.inline-label {
+            width: auto;
+            margin: 4px 15px 4px auto;
+		}
+		button {
+			color: $white;
+		}
+	}
+	.content {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+
+//Get Started
+.get-started {
+	text-align: center;
+	#why-classtracks {
+		p {
+			text-align: left;
+		}
+		ol {
+			text-align: left;
+		}
+	}
+	#start-trial {
+		margin-top: 50px;
+		/*margin-bottom: 50px;*/
+		padding-top: 50px;
+		padding-bottom: 55px;
+		background-color: rgb(249, 249, 249);
+		button {
+			color: $white;
+		}
+	}
 	.form {
 		background: $white;
 		margin-top: 50px;

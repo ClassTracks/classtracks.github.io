@@ -7,14 +7,14 @@
  */
 .site-header {
     min-height: 50px;
-    padding: 20px 0 20px;
-    background-color: $white;
+    /*padding: 20px 0 20px;*/
+    background-color: rgba(255,255,255,0.9);
 
     // Positioning context for the mobile navigation icon
     position: relative;
     z-index: 100;
     @include media-query($on-palm) {
-	    background: $dark-color;
+	    background: $white;
 	    padding: 20px 0;
     }
 }
@@ -23,10 +23,10 @@
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     float: left;
     img {
-	    max-width:275px;
+	    max-width:225px;
     }
     &,
     &:visited {
@@ -46,7 +46,7 @@
 .site-nav {
     float: right;
     line-height: 56px;
-    margin-top: 9px;
+    margin-top: 5px;
 
     .menu-icon {
         display: none;

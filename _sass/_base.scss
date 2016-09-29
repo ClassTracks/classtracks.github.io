@@ -319,3 +319,14 @@ pre {
  textarea {
         background-color: $grey-color-light;
      }
+
+/* Custom Highlighting */
+::-moz-selection { /* Code for Firefox */
+    color: $white;
+    background: $ct-turquoise;
+}
+
+::selection {
+    color: $white; 
+    background: $ct-turquoise;
+}
