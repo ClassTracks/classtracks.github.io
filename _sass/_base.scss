@@ -108,17 +108,17 @@ h2 {
 	
 }
 h3 {
-	font-family: "Adelle-Regular", "Lato", "Helvetica Neue", sans-serif; 
-	font-size: 18px; 
+	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif; 
+	font-size: 2em; 
 	font-weight: 200;
-	color: #ct-grey-3;
+	color: $ct-grey-3;
 	margin: 5px 0;
 }
 h4 {
 	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif; 
-	font-size: 17px; 
-	font-weight: 700;
-	color: #ct-grey-3;
+	font-size: 1.5em; 
+	font-weight: 200;
+	color: $ct-grey-3;
 	margin: 5px 0;
 }
 
@@ -128,10 +128,10 @@ h4 {
  * Links
  */
 a {
-    color: $ct-turquoise;
+    color: $white;
     text-decoration: none;
     &:visited {
-        color: darken($ct-turquoise, 15%);
+        color: $ct-turquoise;
     }
 
     &:hover {
@@ -150,7 +150,7 @@ a {
 			 color: $ct-turquoise;
 		 }
 		 &:hover {
-			 opacity: 0.75;
+			 opacity: 0.9;
 		 }
 	 }
 }
@@ -170,7 +170,7 @@ a {
      background-color: $ct-turquoise;
      color: $white;
      &:hover {
-             opacity: 0.75;
+             opacity: 0.9;
          }
 	 &.cta {
 		 
@@ -287,7 +287,7 @@ pre {
 	 padding: 10px;
 	 vertical-align: top;
      border: 1px solid $white;
-	 border-bottom: 1px solid $grey-color;
+	 border-bottom: 1px solid $ct-grey-3;
 	 box-shadow: none;
 	 &.cta {
 		 background-color: $ct-turquoise;

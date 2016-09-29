@@ -43,14 +43,8 @@ p.intro {
 
 /*===============PAGE SPECIFIC STYLES===================*/
 .home {
-	.site-title img {
-		display: none;
-		width:20px;
-		height:20px;
-		box-sizing:border-box;
-		padding-left: 20px;
-		/*width of the image*/
-		background: url('/assets/logos/solid-white-transparent.png') left top no-repeat;
+	/*.site-header {
+		background: none;
 	}
 	.page-link {
 		color: $white;
@@ -58,7 +52,7 @@ p.intro {
 		&.cta {
 			border: none;
 		}
-	}
+	}*/
 }
 
 section.homepage {
@@ -198,7 +192,7 @@ section.homepage {
 		}
 	}
 	#learn-more-summary {
-		padding-top: 50px;
+		padding-top: 60px;
 		padding-bottom: 50px;
 		background-color: $white;
 		p:first-of-type {
@@ -218,6 +212,12 @@ section.homepage {
 		.row.row-centered {
 			text-align: center;
 			padding: 1em 0;
+		}
+		button {
+			color: $white;
+		}
+		img {
+			width: 150px;
 		}
 	}
 	#testimonials {
@@ -239,8 +239,48 @@ section.homepage {
 		}
 	}
 	#awards {
+		margin-bottom: 50px;
+
 		.col-sm-4 {
+			vertical-align: top;
 			text-align: center;
+		}
+		#emaze {
+			img {
+				margin-top: -10px;
+			}
+			p {
+				margin-top: -5px;
+			}
+		}
+		#breakfast {
+			p {
+				margin-top: -13px;
+			}
+		}
+		#startup-md {
+			img {
+				padding-top: 30px;
+			}
+			
+		}
+		#lean-lab {
+			img {
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+			}
+		}
+		.awards-container {
+			width: 100%;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			.col-md-2 {
+				display: inline;
+				max-width: 150px;
+			}
+		}
+		.awards-scroll {
+			width: 4080px;
 		}
 	}
 }
@@ -280,6 +320,8 @@ section.homepage {
         }
         &.achievements {
 	        /*background-color: $grey-color-light;*/
+	        padding-top: 20px;
+	        margin-bottom: 50px;
 	        p {
 		        font-size:12px;
 		        margin-top: -15px;
@@ -292,13 +334,46 @@ section.homepage {
 	        }
         }
     }
+    .superheroes {
+    	display: inline-block;
+    }
+    .text {
+    	max-width: 40%;
+    	float: left;
+    	margin-right: 20px;
+    	margin-top: 60px;
+    }
+    .video {
+    	max-width: 50%;
+    	float: right;
+    }
+    .mission {
+    	text-align: left;
+    	h2 {
+    		margin-left: 0;
+    	}
+    	hr {
+    		margin-top: 20px;
+    		margin-bottom: 20px;
+    	}
+    }
     .team {
         .col-md-4 {
             padding: 50px 30px;
          }
          p {
-	         text-align: left;
+	         text-align: center;
+	         margin-top: -15px;
          }
+         h4 {
+         	color: $ct-grey-3;
+         	font-family: 'Lato';
+         	font-weight: 400;
+         }
+    }
+    .founders {
+    	margin-left: auto;
+    	margin-right: auto;
     }
     /*.team.founders .col-md-4 h3 {
                 position: relative;
@@ -311,6 +386,7 @@ section.homepage {
     	height: 300px;
     	width: 300px;
     	overflow: hidden;
+    	border-radius: 150px;
     }
     .bio {
     	width: 300px;
@@ -323,7 +399,7 @@ section.homepage {
     	bottom: 0;
     	left: 0;
     	right: 0;
-    	background: $ct-turquoise;
+    	background: $ct-grey-5;
     	color: #fff;
 
     	visibility: hidden;
@@ -335,12 +411,26 @@ section.homepage {
     	opacity: 0.9;
     	-webkit-transition: visibility opacity 0.2s;
     }
-    .scroll-wrap {
+    #you {
+    	background-color: $ct-grey-5;
+    }
+    .timeline-wrap {
     	height: 400px;
     	width:100%;
-    	background-color: $ct-red;
+    	background-color: $white;
     	overflow-x: scroll;
     	overflow-y: hidden;
+    }
+    .timeline-inner {
+    	z-index: 1;
+    	height:100%;
+    	top:0;
+    	left:0;
+    	background-size: auto 100%;
+    	background-image: url('/assets/imgs/timeline-update.png');
+    }
+    button {
+    	color: $white;
     }
 
 }
@@ -350,16 +440,50 @@ section.how-it-works {
 	.row {
 		margin-bottom: 100px;
 	}
+	h3 {
+		font-family: 'Lato';
+		font-weight: 700;
+		line-height: 1.25;
+	}
 	.instruction-details {
 		display: inline-block;
 		&.left {
 			float: left;
-			max-width: 40%;
+			max-width: 45%;
+			margin-right: 20px;
 		}
 		&.right {
 			float: right;
+			max-width: 50%;
 			/*border: 10px solid $grey-color-light;
 			border-radius: 5px;*/
+		}
+	}
+	.screen {
+		border: 2px solid $ct-grey-2;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.screen-top {
+		background-color: $ct-grey-1;
+		border-bottom: 2px solid $ct-grey-2;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		padding-left: 10px;
+	}
+	.screen-buttons {
+		height: 10px;
+		width: 10px;
+		border-radius: 50%;
+		display: inline-block;
+		&.red {
+			background-color: $ct-red;
+		}
+		&.yellow {
+			background-color: $ct-yellow;
+		}
+		&.green {
+			background-color: $ct-turquoise;
 		}
 	}
 	.cta {
@@ -377,8 +501,12 @@ section.how-it-works {
 			}
 		}
 	}
+	ul {
+		font-weight: 400;
+	}
 }
 
+/*
 //learn More Page
 body.learn-more {
 	padding-top:0px;
@@ -465,6 +593,7 @@ body.learn-more {
 		}
 	}
 }
+*/
 //Legal
 body.legal {
 	padding-top:0px;
@@ -503,6 +632,7 @@ body.legal {
 	.form {
 		background: $white;
 		margin-bottom: 50px;
+		text-align: center;
 		.col-md-6 {
 			padding: 0 5%;
 		}
@@ -511,7 +641,7 @@ body.legal {
 			font-size: 18px;
 			padding: 15px 0;
 			margin-bottom: 30px;
-			border: 1px solid $grey-color-light;
+			border: 1px solid $ct-grey-3;
 		}
 		input, textarea {
 			width:100%;
@@ -549,6 +679,9 @@ body.legal {
 			color: $white;
 		}
 	}
+	ol {
+		font-weight: 400;
+	}
 
 }
 //Work With Us
@@ -557,6 +690,7 @@ body.legal {
 		background: $white;
 		margin-top: 50px;
 		margin-bottom: 50px;
+		text-align: center;
 		.col-md-6 {
 			padding: 0 5%;
 		}
@@ -565,7 +699,7 @@ body.legal {
 			font-size: 18px;
 			padding: 15px 0;
 			margin-bottom: 30px;
-			border: 1px solid $grey-color-light;
+			border: 1px solid $ct-grey-3;
 		}
 		input, textarea {
 			width:100%;

@@ -1,9 +1,8 @@
-<header class="site-header">
+<header class="site-header navbar-fixed-top">
   <div class="wrapper">
     <div class="container">
       <a class="site-title" href="{{ site.baseurl }}/">
-        <!--<img src="/assets/logos/solid-white-transparent.png" alt="{{ site.title }}" title="{{ site.title }}">-->
-        <img src="/assets/logos/solid-color-horizontal.png" alt="{{ site.title }}" title="{{ site.title }}">
+        <!--{% if page.BodyClassTag == "home" %}<img src="/assets/logos/solid-white-transparent.png" alt="{{ site.title }}" title="{{ site.title }}">{% else %}--><img src="/assets/logos/solid-color-horizontal.png" alt="{{ site.title }}" title="{{ site.title }}"><!--{% endif %}-->
       </a>
 
       <nav class="site-nav">
@@ -16,8 +15,8 @@
         </a>
 
         <div class="trigger">
-          <a class="page-link" href="/about/">About Us</a>
-          <a class="page-link" href="/how-it-works/">How It Works</a>
+          <a class="page-link {% if page.BodyClassTag == 'about' %}active{% endif %}" href="/about/">Who We Are</a>
+          <a class="page-link {% if page.BodyClassTag == 'how-it-works' %}active{% endif %}" href="/how-it-works/">How It Works</a>
           <a class="page-link" href="http://blog.myclasstracks.com" target="_blank">Blog</a>
           <a class="page-link cta" href="http://app.myclasstracks.com/login/" target="_blank">Log In</a>
           <a class="page-link cta inverse" href="http://app.myclasstracks.com/signup/" target="_blank">Try it Free</a>
