@@ -14,6 +14,9 @@ section .hero-title {
     margin-bottom: 25px;
 	padding: 200px 0 0px;
 	text-align: center;
+	@include media-query($on-palm) {
+		margin-bottom: -30px;
+	}
 }
 .post-title {
 	color: $ct-turquoise;
@@ -53,6 +56,9 @@ p.intro {
 			border: none;
 		}
 	}*/
+	@include media-query($on-palm) {
+		margin-top: -55px;
+	}
 	margin-top: 240px;
 }
 
@@ -90,6 +96,7 @@ section.homepage {
 			font-weight: 900;
 			font-size: 2.5em;
 			line-height: 1.2;
+			max-width: 80%;
 		}
 		h2 {
 			color: $white;
@@ -101,6 +108,11 @@ section.homepage {
 		@include media-query($on-palm) {
 			.marquee-text {
 				padding-bottom: 50px;
+				max-width: 100%;
+				margin: 0;
+			}
+			h1 {
+				max-width: 100%;
 			}
 			button {
 				width: 100%;
@@ -180,17 +192,6 @@ section.homepage {
 			display: none;
 		}
 	}
-	#video {
-		background-color: #434a54;
-		text-align: center;
-		padding: 1em;
-		video {
-			width: 100%;
-			height:auto;
-			max-width: 720px;
-			max-height: 358px;
-		}
-	}
 	#learn-more-summary {
 		padding-top: 60px;
 		padding-bottom: 50px;
@@ -236,6 +237,16 @@ section.homepage {
 		}
 		h2 {
 			margin-bottom: 30px;
+		}
+		@include media-query($on-palm) {
+			padding:0;
+			max-width: 100%;
+			p {
+				max-width: 90%;
+			}
+			p:last-of-type {
+				text-align: center;
+			}
 		}
 	}
 	#awards {
@@ -283,6 +294,12 @@ section.homepage {
 			width: 4080px;
 		}
 	}
+	@include media-query($on-palm) {
+		text-align: center;
+		h2 {
+			line-height: 1.25;
+		}
+	}
 }
 //About Page
 .about {
@@ -300,7 +317,7 @@ section.homepage {
 		}
 		@include media-query($on-palm) {
 			margin-top: 0px;
-			padding: 75px 0;
+			padding: 0;
 		}
 	}
     .post-intro {
@@ -328,19 +345,39 @@ section.homepage {
 		        color: rgba($ct-blue, .65);
 	        }
         }
+        @include media-query($on-palm) {
+        	h2 {
+        		text-align: center;
+        		margin-left: 0;
+        	}
+    	}
     }
     .superheroes {
     	display: inline-block;
+
+    	@include media-query($on-palm) {
+    		display: block;
+    	}
     }
     .text {
     	max-width: 40%;
     	float: left;
     	margin-right: 20px;
     	margin-top: 60px;
+    	@include media-query($on-palm) {
+    		max-width: 100%;
+    		float: none;
+    		text-align: center;
+    	}
+    	
     }
-    .video {
-    	max-width: 50%;
-    	float: right;
+    #video {
+    	width: 560px;
+    	@include media-query($on-palm) {
+    		max-width: 100%;
+    		height: auto;
+    		float: none;
+    	}    	
     }
     .mission {
     	text-align: left;
@@ -351,9 +388,12 @@ section.homepage {
     		margin-top: 20px;
     		margin-bottom: 20px;
     	}
+    	@include media-query($on-palm) {
+    		text-align: center;
+    	}
     }
     .team {
-        .col-md-4 {
+        .col-sm-4 {
             padding: 50px 30px;
          }
          p {
@@ -409,19 +449,26 @@ section.homepage {
     	background-color: $white;
     	overflow-x: scroll;
     	overflow-y: hidden;
+    	position: relative;
+    	transform: translateZ(0);
     }
     .timeline-inner {
     	z-index: 1;
     	height:100%;
+    	width: 100%;
+    	min-width: 1195px;
     	top:0;
     	left:0;
+    	position: absolute;
     	background-size: auto 100%;
     	background-image: url('/assets/imgs/timeline-update.png');
+    	@include media-query($on-palm) {
+    		width: 1195px;
+    	}
     }
     button {
     	color: $white;
     }
-
 }
 
 //how it works
@@ -491,7 +538,14 @@ section.how-it-works {
 	}
 	@include media-query($on-palm) {
 		.instruction-details {
+			display: block;
 			&.left {
+				float: none;
+				max-width: 100%;
+				text-align: center;
+			}
+			&.right {
+				float: none;
 				max-width: 100%;
 			}
 		}
@@ -575,6 +629,12 @@ body.legal {
 	.question {
 		padding-left: 100px;
 		padding-right: 100px;
+		@include media-query($on-palm) {
+			padding: 0;
+		}
+	}
+	a:hover {
+		opacity: 0.75;
 	}
 	.row {
 		margin-bottom: 50px;
@@ -588,7 +648,17 @@ body.legal {
 	ol {
 		font-weight: 400;
 	}
-
+	@include media-query($on-palm) {
+		text-align: center;
+		h2 {
+			line-height: 1.25;
+		}
+		ol {
+			li {
+				text-align: left;
+			}
+		}
+	}
 }
 //Work With Us
 .work-with-us {
@@ -626,6 +696,9 @@ body.legal {
 	.content {
 		padding-left: 100px;
 		padding-right: 100px;
+		@include media-query($on-palm) {
+			padding: 0;
+		}
 	}
 }
 
@@ -684,5 +757,13 @@ body.legal {
 	.content {
 		padding-left: 100px;
 		padding-right: 100px;
+		@include media-query($on-palm) {
+			padding: 0;
+		}
 	}
+	@include media-query($on-palm) {
+			h2 {
+				line-height: 1.25;
+			}
+		}
 }

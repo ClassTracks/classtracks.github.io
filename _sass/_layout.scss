@@ -7,8 +7,8 @@
  */
 .site-header {
     min-height: 50px;
-    /*padding: 20px 0 20px;*/
     background-color: rgba(255,255,255,0.9);
+    box-shadow: 0px 1px 10px $ct-grey-1;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -93,7 +93,7 @@
         position: absolute;
         top: 30px;
         right: 0px;
-        text-align: left;
+        text-align: center;
         width: 100%;
 
         .menu-icon {
@@ -116,7 +116,7 @@
             &:hover {
 	            >svg {
 		            path {
-			            fill: $ct-blue;
+			            fill: $ct-turquoise;
 		            }
 	            }
             }
@@ -138,13 +138,20 @@
 
         .page-link {
             display: block;
-		  padding: 10px 80px 10px 20px;
-		  text-align: left;
-		  border-top: 1px solid rgba(255,255,255, .5);
-		  &.cta.inverse {
-			  background-color: $ct-turquoise;
-			  color: $white;
-		  }
+            padding: 10px 80px 10px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255, .5);
+            color: $white;
+            &.cta {
+                border-radius:0;
+                border-top: 1px solid rgba(255,255,255, .5);
+            }
+            &.cta.inverse {
+                background-color: $white;
+                color: $ct-turquoise;
+                border-top: 1px solid $ct-turquoise;
+                margin-left: 0;
+            }
         }
     }
 }
