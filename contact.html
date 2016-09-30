@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Contact Us
 permalink: /contact/
 ---
 
@@ -8,7 +9,7 @@ permalink: /contact/
     <div class="col-md-12">
       <header class="post-header">
         <h1 class="post-title">
-          Contact Us
+          {{ page.title }}
         </h1>
         <a href="/work-with-us">
           <p>
@@ -32,9 +33,10 @@ permalink: /contact/
             <input type="email" name="_replyto" required placeholder="Your email" data-error="Please enter valid email address!" />
             <input type="hidden" name="_subject" value="New submission!" />
             <textarea rows="5" name="message" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
-            <!--input type="hidden" name="_next" value="/message-confirmation.html" /-->
             <input type="text" name="_gotcha" style="display:none" />
-            <button type="submit" />Send</button>
+            <button type="submit">
+              Send
+            </button>
           </form>
         </div>
       </div>

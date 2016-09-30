@@ -9,7 +9,9 @@ intro: We're not actively hiring right now, but we're always interested in meeti
   <div class="container-fluid hero-title">
     <div class="col-md-12">
       <header class="post-header">
-        <h1 class="post-title">Work With Us</h1>
+        <h1 class="post-title">
+          {{ page.title }}
+        </h1>
       </header>
     </div>
   </div>
@@ -88,29 +90,27 @@ intro: We're not actively hiring right now, but we're always interested in meeti
                 </p>
               </div> <!-- #open-positions -->
             </div>
-
-              
-
           </div>
         </div>
       </div>
     </div>
     <div class="container-fluid form">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6" id="override">
-          <form action="//formspree.io/info@myclasstracks.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name">
-            <input type="email" name="_replyto" required placeholder="Your email" data-error="Please enter valid email address!" />
-            <input type="hidden" name="_subject" value="New submission!" />
-            <textarea rows="8" name="message" placeholder="Why you'd be an awesome addition to the ClassTracks team!" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
-            <input type="text" name="_gotcha" style="display:none" />
-            <button type="submit" />Send</button>
-          </form>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" id="override">
+            <form action="//formspree.io/info@myclasstracks.com" method="POST">
+              <input type="text" name="name" placeholder="Your Name">
+              <input type="email" name="_replyto" required placeholder="Your email" data-error="Please enter valid email address!" />
+              <input type="hidden" name="_subject" value="New submission!" />
+              <textarea rows="8" name="message" placeholder="Why you'd be an awesome addition to the ClassTracks team!" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
+              <input type="text" name="_gotcha" style="display:none" />
+              <button type="submit">
+                Send
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
   </div>
 </section>
