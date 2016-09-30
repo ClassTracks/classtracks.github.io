@@ -252,19 +252,35 @@ section.homepage {
 	#awards {
 		margin-bottom: 50px;
 
-		.col-sm-4 {
+		/*.logo {
 			vertical-align: top;
 			text-align: center;
+			width: 150px;
+			display: inline;
+		}*/
+		ul {
+			list-style: none;
+			li {
+				display: inline-block;
+				width: 150px;
+				vertical-align: middle;
+				text-align: center;
+				margin-right: 10px;
+				margin-left: 10px;
+			}
 		}
 		#emaze {
 			img {
-				margin-top: -10px;
+				padding-top: 30px;
 			}
 			p {
 				margin-top: -5px;
 			}
 		}
 		#breakfast {
+			img {
+				padding-top: 30px;
+			}
 			p {
 				margin-top: -13px;
 			}
@@ -277,9 +293,11 @@ section.homepage {
 		}
 		#lean-lab {
 			img {
+				padding-top: 30px;
 				-webkit-filter: grayscale(100%);
 				filter: grayscale(100%);
 			}
+
 		}
 		.awards-container {
 			width: 100%;
@@ -291,7 +309,7 @@ section.homepage {
 			}
 		}
 		.awards-scroll {
-			width: 4080px;
+			width: 2000px;
 		}
 	}
 	@include media-query($on-palm) {
@@ -561,7 +579,7 @@ body.legal {
 		margin-top: -175px;
 		padding: 200px 0 0px;
 		text-align: center;
-		background: $dark-color;
+		background-color: $ct-grey-1;
 		background-size: 100%;
 		background-position: center;
 		.post-title {
@@ -578,6 +596,7 @@ body.legal {
 		}
 		p.intro {
 			text-align: center;
+			color: $ct-grey-4;
 		}
 	}
 	.row {
