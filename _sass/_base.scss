@@ -85,9 +85,7 @@ li {
  * Headings
  */
 h1 {
-    /*font-weight: 100;*/
     font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif;
-    /*text-transform: uppercase;*/
     color: $ct-grey-3;
     span.blue {
 	    color: $ct-blue;
@@ -102,7 +100,6 @@ h2 {
 	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif;
 	font-size: 2.5em;
 	font-weight: 300;
-	/*color: $ct-blue;*/
     color: $ct-grey-3;
 	margin:7.5px 0;
 	
@@ -135,53 +132,55 @@ a {
     }
 
     &:hover {
-        /*color: darken($ct-turquoise, 15%);*/
         opacity: 0.75;
         text-decoration: none !important;
     }
     &.cta {
-         padding:10px 15px;
-		 background-color: $ct-turquoise;
-         border: 1px solid $ct-turquoise;
-		 border-radius: 30px;
-		 color: #fff;
-		 &.inverse {
-			 background-color: #ffffff;
-			 color: $ct-turquoise;
-		 }
-		 &:hover {
-			 opacity: 0.9;
-		 }
-	 }
+        padding: 10px 15px;
+		background-color: $ct-turquoise;
+        border: 1px solid $ct-turquoise;
+		border-radius: 30px;
+		color: #fff;
+		&.inverse {
+			background-color: #ffffff;
+			color: $ct-turquoise;
+		}
+		&:hover {
+			opacity: 0.9;
+		}
+	}
 }
 
 /**
  * Buttons
  */
  button {
-	 display: inline-block;
-	 padding: 5px 20px;
-	 margin: 0 10px;
-	 border: 2px solid $ct-turquoise;
-	 border-radius: 40px;
-	 font-size: 16px;
-	 font-family: 'Lato', Helvetica Neue, serif !important;
-	 font-weight: 500 !important;
-     background-color: $ct-turquoise;
-     color: $white;
-     &:hover {
-             opacity: 0.9;
-         }
-	 &.cta {
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 0 10px;
+    border: 2px solid $ct-turquoise;
+    border-radius: 40px;
+    font-size: 16px;
+    font-family: 'Lato', Helvetica Neue, serif !important;
+    font-weight: 500 !important;
+    background-color: $ct-turquoise;
+    color: $white;
+    &:hover {
+        opacity: 0.9;
+    }
+    &.cta {
+		a {
+            color: #fff;
+        }
+		&.inverse {
+			background-color: #ffffff;
+			a {
+                color: $ct-turquoise;
+            }
+		}
 		 
-		 a {color: #fff;}
-		 &.inverse {
-			 background-color: #ffffff;
-			 a {color: $ct-turquoise;}
-		 }
-		 
-	 }
- }
+	}
+}
 
 
 /**
@@ -283,30 +282,29 @@ pre {
  * Forms
  */
  
- input, textarea {
-	 padding: 10px;
-	 vertical-align: top;
-     border: 1px solid $white;
-	 border-bottom: 1px solid $ct-grey-3;
-	 box-shadow: none;
-	 &.cta {
-		 background-color: $ct-turquoise;
-		 border-radius: 2px;
-		 color: #fff;
-		 font-family: "Adelle-Bold", "Lato", helvetica neue, sans-serif;
-		 &.inverse {
-			 background-color: #ffffff;
-			 color: $ct-turquoise;
-		 }
-		 &:hover {
-			 background-color: $ct-blue-dark;
-			 color: #fff;
-		 }
-	 }
+input, textarea {
+    padding: 10px;
+	vertical-align: top;
+    border: 1px solid $white;
+	border-bottom: 1px solid $ct-grey-3;
+	box-shadow: none;
+	&.cta {
+		background-color: $ct-turquoise;
+		border-radius: 2px;
+		color: #fff;
+		font-family: "Adelle-Bold", "Lato", helvetica neue, sans-serif;
+		&.inverse {
+			background-color: #ffffff;
+			color: $ct-turquoise;
+		}
+		&:hover {
+			background-color: $ct-blue-dark;
+			color: #fff;
+		}
+	}
+}
 
- }
-
- input, textarea {
+input, textarea {
     &:focus {
         outline: none;
         border: 1px solid $white;
@@ -316,9 +314,9 @@ pre {
  }
 
 
- textarea {
+textarea {
         background-color: $grey-color-light;
-     }
+    }
 
 /* Custom Highlighting */
 ::-moz-selection { /* Code for Firefox */
