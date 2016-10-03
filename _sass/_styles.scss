@@ -1,426 +1,568 @@
 /*===============GENERAL STYLES=========================*/
 /*nav*/
 nav.site-nav {
-	a[href="/privacy-policy/"], a[href="/terms-of-use/"] {
-		display: none;
-	}
+  a[href="/privacy-policy/"], a[href="/terms-of-use/"] {
+    display: none;
+  }
 }
 /*page title*/
 section .hero-title {
-	background-size: cover !important;
-	background-position: center !important;
-	background-color: $dark-color;
-	margin-top:-175px;
-    margin-bottom: 25px;
-	padding: 200px 0 75px;
-	text-align: center;
+  background-size: cover !important;
+  background-position: center !important;
+  margin-top: -175px;
+  margin-bottom: 25px;
+  padding: 200px 0 0px;
+  text-align: center;
+  @include media-query($on-palm) {
+    margin-bottom: -30px;
+  }
 }
 .post-title {
-	color: $ct-turquoise;
-}
-/*intro copy*/
-p.intro {
-	color: $white;
-	margin: 15px auto;
-	text-align: left;
+  color: $ct-turquoise;
 }
 /*buttons*/
 .button {
-	display:block;
-	padding: 10px;
-	border-radius: 2px;
-	&.red {
-		background: rgba($ct-red,.85);
-		&:hover {
-			background: $ct-turquoise;
-		}
-	}
+  display: block;
+  padding: 10px;
+  border-radius: 2px;
+  &.red {
+    background: rgba($ct-red,.85);
+    &:hover {
+      background: $ct-turquoise;
+    }
+  }
 }
 /*fluid containers*/
 .container-fluid {
-	background-color: $white;
+  background-color: $white;
 }
 
 /*===============PAGE SPECIFIC STYLES===================*/
-section.homepage {
-	position: relative;
-	z-index: 99;
-	margin-top:-175px;
-	@include media-query($on-laptop) {
-		margin-top: -220px;
-	}
-	@media screen and (max-width: 600px) {
-		margin-top:0px;
-	}
-
-	.marquee {
-		padding: 413px 0 0;
-		background-image:url('/assets/imgs/marquees/teacher-with-student.png');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		@media screen and (max-width: 600px) {
-			padding: 55px 15px 0;
-		}
-		.marquee-text {
-			padding-bottom: 90px;
-			button {
-				font-size: 22px;
-			}
-		}
-		h1 {
-			color: $white;
-			font-weight: 900;
-			font-size: 2.5em;
-		}
-		@include media-query($on-palm) {
-			.marquee-text {
-				padding-bottom: 50px;
-			}
-			button {
-				width: 100%;
-			}
-		}
-	}
-	.home-cta {
-		background: rgba($ct-blue,.7);
-		padding: $spacing-unit 0;
-		color: $white;
-		text-align: center;
-		.container {
-			padding: 0;
-		}
-		p { font-size: 20px;}
-		button { font-size: 22px; margin: 0 0 0 25px;}
-		.signup-form {
-			margin-top:-60px;
-			.summary {
-				padding: $spacing-unit+10 ($spacing-unit*2)+20 $spacing-unit*2 $spacing-unit;
-				.row {
-					margin-bottom:  $spacing-unit/2;
-				}
-				@media screen and (max-width: 600px) {
-					padding: $spacing-unit+10;
-				}
-			}
-			h4 {
-				display: inline;
-			}
-			h3 {
-				color: $white;
-				margin-bottom: $spacing-unit+10;
-			}
-			#mc_embed_signup {
-			padding: $spacing-unit+10;
-			box-sizing: border-box;
-			color: $dark-color;
-				@media screen and (max-width: 600px) {
-					padding: $spacing-unit/2;
-				}
-				#mc-embedded-subscribe-form {
-					padding-right: 60px;
-					border-right: 1px solid rgba(255,255,255,.25);
-					@media screen and (max-width: 600px) {
-						padding-right:0px;
-						border-right: none;
-					}
-				}
-				input {
-					background: rgba($white, .75);
-					border: none;
-					padding: 10px;
-					width: 100%;
-				}
-				input[type=submit] {
-					background: rgba($ct-turquoise, .85);
-					font-weight: bold;
-					margin: 15px 0 0;
-					color: $white;
-					&:hover {
-					background: $ct-blue-dark;
-					}
-				}
-				.mc-field-group {
-					display: inline-block;
-					margin: 15px auto;
-				}
-				label {
-					display: block;
-					font-weight: 200;
-					color: $white;
-				}
-			}
-		}
-		@include media-query($on-palm) {
-			display: none;
-		}
-	}
-	#video {
-		background-color: #434a54;
-		text-align: center;
-		padding: 1em;
-		video {
-			width: 100%;
-			height:auto;
-			max-width: 720px;
-			max-height: 358px;
-		}
-	}
-	#learn-more-summary {
-		padding-top: 30px;
-		padding-bottom: 30px;
-		background-color: $white;
-		p:first-of-type {
-			text-align: center;
-		}
-		p > i.fa  {
-			text-align: center;
-			color: $ct-yellow-dark;
-			font-size:50px;
-		}
-		h2 {
-			text-align: center;
-		}
-		.row.row-centered {
-			text-align: center;
-			padding: 1em 0;
-		}
-	}
-	#vision-mission {
-		background: $dark-color;
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		background-position: left;
-		padding: 3.5em 0;
-		.col-centered {
-			text-align: center;
-			p {
-				color: $white;
-				width: 90%;
-				display: block;
-				margin: 10px auto 20px;
-				text-align: left;
-			}
-		}
-		@include media-query($on-palm) {
-			background-size: cover;
-			padding:20px;
-			.col-centered {
-				padding: 10px 0px;
-			}
-		}
-	}
+.home {
+  @include media-query($on-palm) {
+    margin-top: -55px;
+  }
+  margin-top: 240px;
 }
-//About Page
-.about {
-	.hero-title {
-		margin-top: -175px;
-		padding: 200px 0 75px;
-		text-align: center;
-		background: $dark-color;
-		.post-title {
-			span.blue {
-				color: $ct-blue;
-			}
-			span.turq {
-				color: $ct-turquoise;
-			}
-		}
-		@include media-query($on-palm) {
-			margin-top: 0px;
-			padding: 75px 0;
-		}
-	}
-    .post-intro {
-        padding:50px 0;
-        text-align: left;
+
+section.homepage {
+  position: relative;
+  z-index: 99;
+  margin-top: -175px;
+  @include media-query($on-palm) {
+    margin-top: -220px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-top:0px;
+  }
+
+  .marquee {
+    background-image: url('/assets/imgs/marquees/teacher-with-student.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 600px) {
+      padding: 55px 15px 0;
+    }
+    .marquee-text {
+      padding-top: 250px;
+      padding-bottom: 90px;
+      max-width: 50%;
+      margin-left: 50px;
+      button {
+        font-size: 22px;
+        color: $white;
+      }
+    }
+    h1 {
+      color: $white;
+      font-weight: 900;
+      font-size: 2.5em;
+      line-height: 1.2;
+      max-width: 80%;
+    }
+    h2 {
+      color: $white;
+    }
+    p {
+      color: $white;
+      font-size: 1em;
+    }
+    @include media-query($on-palm) {
+      .marquee-text {
+        padding-bottom: 50px;
+        max-width: 100%;
+        margin: 0;
+      }
+      h1 {
+        max-width: 100%;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+  #how-it-works-summary {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    background-color: $white;
+    p:first-of-type {
+      text-align: center;
+    }
+    h2.center {
+      text-align: center;
+    }
+    .row.row-centered {
+      text-align: center;
+      padding: 1em 0;
+    }
+    button {
+      color: $white;
+    }
+    img {
+      width: 150px;
+    }
+  }
+  #testimonials {
+    padding: 50px;
+    padding-top: 20px;
+    p {
+      max-width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p:last-of-type {
+      text-align: right;
     }
     .row {
-        padding: 30px 0;
+      margin-bottom: 30px;
+    }
+    h2 {
+      margin-bottom: 30px;
+    }
+    @include media-query($on-palm) {
+      padding:0;
+      max-width: 100%;
+      p {
+        max-width: 90%;
+      }
+      p:last-of-type {
         text-align: center;
-        h2:after {
-            content: '';
-            display: block;
-            height: 1px;
-            width: 10%;
-            margin: 10px auto;
-            background-color: $ct-turquoise;
-        }
-        &.team-bios {
-	        background-color: rgba($grey-color-light, .5)
-        }
-        &.achievements {
-	        background-color: $grey-color-light;
-	        p {
-		        font-size:12px;
-		        margin-top: -15px;
-		        color: rgba($ct-blue, .65);
-	        }
-            p.startupmd {
-		        font-size:12px;
-		        margin-top: 0px;
-		        color: rgba($ct-blue, .65);
-	        }
-        }
+      }
     }
-    .team {
-        .col-md-4 {
-            padding: 50px 30px;
-         }
-         p {
-	         text-align: left;
-         }
+  }
+  #awards {
+    margin-bottom: 50px;
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        width: 150px;
+        vertical-align: middle;
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
     }
-    .team.founders .col-md-4 h3 {
-                position: relative;
-                bottom: 75px;
-                text-align: center;
-                color: $white;
-            }
+    #emaze {
+      img {
+        padding-top: 30px;
+      }
+      p {
+        margin-top: -5px;
+      }
+    }
+    #breakfast {
+      img {
+        padding-top: 30px;
+      }
+      p {
+        margin-top: -13px;
+      }
+    }
+    #startup-md {
+      img {
+        padding-top: 30px;
+      }
+      
+    }
+    #lean-lab {
+      img {
+        padding-top: 30px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+    }
+    .awards-container {
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+    .awards-scroll {
+      width: 2000px;
+    }
+  }
+  @include media-query($on-palm) {
+    text-align: center;
+    h2 {
+      line-height: 1.25;
+    }
+  }
+}
+// Who We Are
+.who-we-are {
+  .hero-title {
+    margin-top: -175px;
+    padding: 200px 0 0px;
+    text-align: center;
+    @include media-query($on-palm) {
+      margin-top: 0px;
+      padding: 0;
+    }
+  }
+  .row {
+    padding: 30px 0;
+    text-align: center;
+    h2 {
+      text-align: left;
+      margin-left: 75px;
+    }
+    @include media-query($on-palm) {
+      h2 {
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+  }
+  .superheroes {
+    display: inline-block;
 
+    @include media-query($on-palm) {
+      display: block;
+    }
+  }
+  .text {
+    max-width: 40%;
+    float: left;
+    margin-right: 20px;
+    margin-top: 60px;
+    @include media-query($on-palm) {
+      max-width: 100%;
+      float: none;
+      text-align: center;
+    }  
+  }
+  #video {
+    width: 560px;
+    @include media-query($on-palm) {
+      max-width: 100%;
+      height: auto;
+      float: none;
+    }      
+  }
+  .mission {
+    text-align: left;
+    h2 {
+      margin-left: 0;
+    }
+    @include media-query($on-palm) {
+      text-align: center;
+    }
+  }
+  .team {
+    .col-sm-4 {
+      padding: 50px 30px;
+    }
+    p {
+      text-align: center;
+      margin-top: -15px;
+    }
+    h4 {
+      color: $ct-grey-3;
+      font-family: 'Lato';
+      font-weight: 400;
+    }
+  }
+  .founders {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .headshot {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 150px;
+  }
+  .timeline-wrap {
+    height: 400px;
+    width: 100%;
+    background-color: $white;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    transform: translateZ(0);
+  }
+  .timeline-inner {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    min-width: 1195px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-size: auto 100%;
+    background-image: url('/assets/imgs/timeline.png');
+    @include media-query($on-palm) {
+      width: 1195px;
+    }
+  }
+  button {
+    color: $white;
+  }
 }
 
-//learn More Page
-body.learn-more {
-	padding-top:0px;
-	padding-bottom: 0px !important;
-	.hero-title {
-		margin-top: -175px;
-		padding: 200px 0 75px;
-		text-align: center;
-		background: linear-gradient(rgba($dark-color, .25), rgba($dark-color, .5)), url('/assets/imgs/marquees/student-on-laptop.jpg');
-		background-size: 100%;
-		background-position: center;
-		.post-title {
-			span.blue {
-				color: $ct-blue;
-			}
-			span.turq {
-				color: $ct-turquoise;
-			}
-		}
-	}
-	.post .container:first-child {
-		width: 100% !important;
-	}
-	.post-content {
-		margin-bottom: 0px;
-		h2 {
-			text-align: center;
-			&:after {
-				content: '';
-				display: block;
-				height: 1px;
-				width: 10%;
-				margin: 10px auto;
-				background-color: #48CFAD;
-			}
-		}
-	}
-	#tabs {
-		ul.ui-tabs-nav {
-			padding: 0;
-			margin: 0;
-			background-color: $grey-color-light;
-			text-align: center;
+// How It Works
+section.how-it-works {
+  .row {
+    margin-bottom: 100px;
+  }
+  h3 {
+    font-family: 'Lato';
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  a {
+    color: $ct-turquoise;
+    &:hover {
+      opacity:0.7;
+    }
+  }
+  .instruction-details {
+    display: inline-block;
+    &.left {
+      float: left;
+      max-width: 45%;
+      margin-right: 20px;
+    }
+    &.right {
+      float: right;
+      max-width: 50%;
+    }
+  }
+  .screen {
+    border: 2px solid $ct-grey-2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .screen-top {
+    background-color: $ct-grey-1;
+    border-bottom: 2px solid $ct-grey-2;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding-left: 10px;
+  }
+  .screen-buttons {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    &.red {
+      background-color: $ct-red;
+    }
+    &.yellow {
+      background-color: $ct-yellow;
+    }
+    &.green {
+      background-color: $ct-turquoise;
+    }
+  }
+  .cta {
+    margin-top: 50px;
+    text-align: center;
 
-			li {
-				display: inline-block;
-				width: 16%;
-				text-align: center;
-				border-right: 1px solid rgba($white, .5);
-				a {
-					font-weight: 500;
-					color: $ct-turquoise;
-					display: block;
-					padding: 20px 0;
-				}
-				&:last-child {
-					border-right: none;
-				}
-				&.ui-state-active, &:hover {
-					border-bottom: 2px solid $ct-blue;
-					a {
-						color: $ct-blue;
-					}
-				}
-			}
-		}
-		.tab-content {
-			padding: 1.5em 0 3.5em;
-			ul {
-				padding: 0;
-			}
-		}
-	}
-	@include media-query($on-palm) {
-		.hero-title {
-			margin-top: 0px;
-			padding: 75px 0;
-			background-size: cover;
-		}
-		#tabs ul.ui-tabs-nav {
-			li {
-				width: 100% !important;
-			}
-		}
-	}
+    button {
+      color: white;
+    }
+  }
+  @include media-query($on-palm) {
+    .instruction-details {
+      display: block;
+      &.left {
+        float: none;
+        max-width: 100%;
+        text-align: center;
+      }
+      &.right {
+        float: none;
+        max-width: 100%;
+      }
+    }
+  }
+  ul {
+    font-weight: 400;
+  }
 }
-//Legal
+// Legal
 body.legal {
-	padding-top:0px;
-	.hero-title {
-		margin-top: -175px;
-		padding: 200px 0 75px;
-		text-align: center;
-		background: $dark-color;
-		background-size: 100%;
-		background-position: center;
-		.post-title {
-			span.blue {
-				color: $ct-blue;
-			}
-			span.turq {
-				color: $ct-turquoise;
-			}
-		}
-		@include media-query($on-palm) {
-			margin-top: 0px;
-			padding: 75px 0;
-		}
-		p.intro {
-			text-align: center;
-		}
-	}
-	.row {
-		padding: 1.5em 0;
-	}
+  padding-top: 0px;
+  .hero-title {
+    margin-top: -175px;
+    padding: 200px 0 0px;
+    text-align: center;
+    background-color: $ct-grey-1;
+    background-size: 100%;
+    background-position: center;
+    @include media-query($on-palm) {
+      margin-top: 0px;
+      padding: 75px 0;
+    }
+    p.intro {
+      text-align: center;
+      color: $ct-grey-4;
+    }
+  }
+  .row {
+    padding: 1.5em 0;
+  }
 }
-//Contact Us Page
+// Contact Us Page
 .contact-us {
-	.form {
-		background: $white;
-		.col-md-6 {
-			padding: 0 5%;
-		}
-		h3 {
-			color: $ct-blue;
-			font-size: 18px;
-			padding: 15px 0;
-			margin-bottom: 30px;
-			border-bottom: 1px solid $grey-color-light;
-		}
-		input, textarea {
-			width:100%;
-			margin-bottom: 25px;
-			&.cta {
-				width: 50%;
-                margin-top: 25px;
-			}
-        }
-        input.inline-label {
-            width: auto;
-            margin: 4px 15px 4px auto;
-		}
-	}
+  h2 {
+    text-align: center;
+  }
+  .form {
+    margin-bottom: 50px;
+    text-align: center;
+    .col-md-6 {
+      padding: 0 5%;
+    }
+    form {
+    	margin-top: 50px;
+    }
+    input, textarea {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    button {
+      background-color: $ct-turquoise;
+      color: $white;
+      &:hover {
+        opacity:0.75;
+      }
+    }
+  }
+}
+// FAQs
+.faq {
+  .question {
+    padding-left: 100px;
+    padding-right: 100px;
+    @include media-query($on-palm) {
+      padding: 0;
+    }
+  }
+  a:hover {
+    opacity: 0.75;
+  }
+  .row {
+    margin-bottom: 50px;
+  }
+  .cta {
+    text-align: center;
+    button {
+      color: $white;
+    }
+  }
+  ol {
+    font-weight: 400;
+  }
+  @include media-query($on-palm) {
+    text-align: center;
+    h2 {
+      line-height: 1.25;
+    }
+    ol {
+      li {
+        text-align: left;
+      }
+    }
+  }
+}
+// Work With Us
+.work-with-us {
+  .form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    .col-md-6 {
+      padding: 0 5%;
+    }
+    input, textarea {
+      width:100%;
+      margin-bottom: 25px;
+    }
+    button {
+      color: $white;
+    }
+  }
+  .content {
+    padding-left: 100px;
+    padding-right: 100px;
+    @include media-query($on-palm) {
+      padding: 0;
+    }
+  }
+}
+
+// Get Started
+.get-started {
+  text-align: center;
+  #why-classtracks {
+    p {
+      text-align: left;
+    }
+    ol {
+      text-align: left;
+    }
+  }
+  #start-trial {
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    background-color: rgb(249, 249, 249);
+    button {
+      color: $white;
+    }
+  }
+  .form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    .col-md-6 {
+      padding: 0 5%;
+    }
+    form {
+    	margin-top: 50px;
+    }
+    input, textarea {
+      width:100%;
+      margin-bottom: 25px;
+    }
+    button {
+      color: $white;
+    }
+  }
+  .content {
+    padding-left: 100px;
+    padding-right: 100px;
+    @include media-query($on-palm) {
+      padding: 0;
+    }
+  }
+  @include media-query($on-palm) {
+      h2 {
+        line-height: 1.25;
+      }
+    }
 }

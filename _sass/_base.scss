@@ -4,8 +4,8 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -14,13 +14,13 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $body-font;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
+  font-family: $body-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+  color: $text-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 body p {
 	margin: 10px 0;
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
 }
 
 
@@ -46,8 +46,8 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 
@@ -56,11 +56,11 @@ img {
  * Figures
  */
 figure > img {
-    display: block;
+  display: block;
 }
 
 figcaption {
-    font-size: $small-font-size;
+  font-size: $small-font-size;
 }
 
 
@@ -69,14 +69,14 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+  margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -85,13 +85,12 @@ li {
  * Headings
  */
 h1 {
-    font-weight: 100;
-    font-family: "Raleway", "Lato", "Helvetica Neue", sans-serif;
-    text-transform: uppercase;
-    span.blue {
-	    color: $ct-blue;
+  font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif;
+  color: $ct-grey-3;
+  span.blue {
+    color: $ct-blue;
 	}
-    span.turq {
+  span.turq {
 		color: $ct-turquoise;
 		font-weight: 900;
 		text-shadow: 0 0 60px #000
@@ -99,24 +98,24 @@ h1 {
 }
 h2 {
 	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif;
-	font-size: 25px;
+	font-size: 2.5em;
 	font-weight: 300;
-	color: $ct-blue;
+  color: $ct-grey-3;
 	margin:7.5px 0;
 	
 }
 h3 {
-	font-family: "Adelle-Regular", "Lato", "Helvetica Neue", sans-serif; 
-	font-size: 18px; 
+	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif; 
+	font-size: 2em; 
 	font-weight: 200;
-	color: #616973;
+	color: $ct-grey-3;
 	margin: 5px 0;
 }
 h4 {
 	font-family: "Adelle-Bold", "Lato", "Helvetica Neue", sans-serif; 
-	font-size: 17px; 
-	font-weight: 700;
-	color: #616973;
+	font-size: 1.5em; 
+	font-weight: 200;
+	color: $ct-grey-3;
 	margin: 5px 0;
 }
 
@@ -126,73 +125,76 @@ h4 {
  * Links
  */
 a {
+  color: $white;
+  text-decoration: none;
+  &:visited {
     color: $ct-turquoise;
-    text-decoration: none;
-    &:visited {
-        color: darken($ct-turquoise, 15%);
+  }
+  &:hover {
+    opacity: 0.75;
+    text-decoration: none !important;
+  }
+  &.cta {
+    padding: 10px 15px;
+		background-color: $ct-turquoise;
+    border: 1px solid $ct-turquoise;
+		border-radius: 30px;
+		color: #fff;
+	  &.inverse {
+		  background-color: #ffffff;
+		  color: $ct-turquoise;
+	  }
+	  &:hover {
+		  opacity: 0.9;
     }
-
-    &:hover {
-        color: darken($ct-turquoise, 15%);
-        text-decoration: none !important;
-    }
-    &.cta {
-         padding:10px 20px;
-		 background-color: $ct-turquoise;
-		 border-radius: 2px;
-		 color: #fff;
-		 &.inverse {
-			 background-color: #ffffff;
-			 color: $ct-turquoise;
-		 }
-		 &:hover {
-			 background-color: $ct-blue-dark;
-			 color: #fff;
-		 }
-	 }
+	}
 }
 
 /**
  * Buttons
  */
- button {
-	 display: inline-block;
-	 padding: 10px 20px;
-	 margin: 0 10px;
-	 border: none;
-	 border-radius: 2px;
-	 font-size: 16px;
-	 font-family: 'Adelle-Regular', 'Lato', Helvetica Neue, serif !important;
-	 font-weight: 500 !important;
-	 &.cta {
-		 background-color: $ct-turquoise;
-		 a {color: #fff;}
-		 &.inverse {
-			 background-color: #ffffff;
-			 a {color: $ct-turquoise;}
-		 }
-		 &:hover {
-			 background-color: $ct-blue-dark;
-			 a {color: #fff;}
-		 }
-	 }
- }
+button {
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 0 10px;
+  border: 2px solid $ct-turquoise;
+  border-radius: 40px;
+  font-size: 16px;
+  font-family: 'Lato', Helvetica Neue, serif !important;
+  font-weight: 500 !important;
+  background-color: $ct-turquoise;
+  color: $white;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.cta {
+		a {
+      color: #fff;
+    }
+		&.inverse {
+			background-color: #ffffff;
+			a {
+        color: $ct-turquoise;
+      }
+		}	 
+	}
+}
 
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $ct-blue;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+  color: $ct-blue;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -202,25 +204,25 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
 }
 
 code {
-    padding: 1px 5px;
+  padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
+  padding: 8px 12px;
+  overflow-x: scroll;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 
@@ -229,16 +231,14 @@ pre {
  * Wrapper
  */
 .wrapper {
-    /*max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));*/
-    max-width: 100%;
-    margin:0 auto;
-    @extend %clearfix;
+  max-width: 100%;
+  margin: 0 auto;
+  @extend %clearfix;
 
-    @include media-query($on-laptop) {
-        //max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        //max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    }
+  @include media-query($on-laptop) {
+    //max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    //max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+  }
 }
 
 
@@ -247,12 +247,11 @@ pre {
  * Clearfix
  */
 %clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 
@@ -262,40 +261,64 @@ pre {
  */
 .icon {
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
 
-        path {
-            fill: $grey-color;
-        }
+    path {
+      fill: $grey-color;
     }
+  }
 }
 
 /**
  * Forms
  */
  
- input, textarea {
-	 padding: 10px;
-	 vertical-align: top;
-	 border: 1px solid rgba($ct-turquoise, .5);
-	 box-shadow: none;
-	 &.cta {
-		 background-color: $ct-turquoise;
-		 border-radius: 2px;
-		 color: #fff;
-		 font-family: "Adelle-Bold", "Lato", helvetica neue, sans-serif;
-		 &.inverse {
-			 background-color: #ffffff;
-			 color: $ct-turquoise;
-		 }
-		 &:hover {
-			 background-color: $ct-blue-dark;
-			 color: #fff;
-		 }
-	 }
+input, textarea {
+  padding: 10px;
+	vertical-align: top;
+  border: 1px solid $white;
+	border-bottom: 1px solid $ct-grey-3;
+	box-shadow: none;
+	&.cta {
+		background-color: $ct-turquoise;
+		border-radius: 2px;
+		color: #fff;
+		font-family: "Adelle-Bold", "Lato", helvetica neue, sans-serif;
+		&.inverse {
+			background-color: #ffffff;
+			color: $ct-turquoise;
+		}
+		&:hover {
+			background-color: $ct-blue-dark;
+			color: #fff;
+		}
+	}
+}
 
- }
+input, textarea {
+  &:focus {
+    outline: none;
+    border: 1px solid $white;
+    border-bottom: 1px solid $ct-turquoise;
+  }
+}
+
+
+textarea {
+  background-color: $grey-color-light;
+}
+
+/* Custom Highlighting */
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: $ct-turquoise;
+}
+
+::selection {
+  color: $white; 
+  background: $ct-turquoise;
+}

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Contact Us
 permalink: /contact/
 ---
 
@@ -7,7 +8,14 @@ permalink: /contact/
   <div class="container-fluid hero-title">
     <div class="col-md-12">
       <header class="post-header">
-        <h1 class="post-title">CONTACT US</h1>
+        <h1 class="post-title">
+          {{ page.title }}
+        </h1>
+        <a href="/work-with-us">
+          <p>
+            Interested in working with us?
+          </p>
+        </a>
       </header>
     </div>
   </div>
@@ -16,16 +24,19 @@ permalink: /contact/
     <div class="container">
       <div class="row">
         <div class="col-md-6" id="override">
-          <h2>Send Us A Message</h2>
+          <h2>
+            Send Us A Message
+          </h2>
           <form action="//formspree.io/info@myclasstracks.com" method="POST">
             <input type="text" name="name" placeholder="Your Name">
             <input type="text" name="_school" placeholder="School, School District, etc" />
             <input type="email" name="_replyto" required placeholder="Your email" data-error="Please enter valid email address!" />
             <input type="hidden" name="_subject" value="New submission!" />
             <textarea rows="5" name="message" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
-            <!--input type="hidden" name="_next" value="/message-confirmation.html" /-->
             <input type="text" name="_gotcha" style="display:none" />
-            <button type="submit" />Send</button>
+            <button type="submit">
+              Send
+            </button>
           </form>
         </div>
       </div>
