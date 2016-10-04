@@ -253,11 +253,13 @@ section.homepage {
     }  
   }
   #video {
-    width: 560px;
+    max-width: 560px;
+    width: 55%;
     @include media-query($on-palm) {
       max-width: 100%;
       height: auto;
       float: none;
+      width: 100%;
     }      
   }
   .mission {
@@ -281,6 +283,7 @@ section.homepage {
       color: $ct-grey-3;
       font-family: 'Lato';
       font-weight: 400;
+      text-align: center;
     }
   }
   .founders {
@@ -288,9 +291,10 @@ section.homepage {
     margin-right: auto;
   }
   .headshot {
-    position: relative;
-    height: 300px;
-    width: 300px;
+  	margin-left: auto;
+  	margin-right: auto;
+    max-height: 300px;
+    max-width: 300px;
     overflow: hidden;
     border-radius: 150px;
   }
