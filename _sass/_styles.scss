@@ -298,6 +298,30 @@ section.homepage {
     overflow: hidden;
     border-radius: 150px;
   }
+  .bio {
+  	margin-left: 0px;
+  	margin-top: -300px;
+  	position: relative;
+  	height: 300px;
+  	width: 300px;
+  	background-color: rgba(69,186,155,0.75);
+  	visibility: hidden;
+  	padding: 10px;
+  	border-radius: 150px;
+  	p {
+  		vertical-align: middle;
+  		color: $white;
+  	}
+  }
+  .headshot:hover {
+  	border-radius: 0px;
+  	-webkit-transition: 0.5s;
+  	.bio {
+  		border-radius: 0px;
+  		visibility: visible;
+  		-webkit-transition: 0.5s;
+  	}
+  }
   .timeline-wrap {
     height: 400px;
     width: 100%;
