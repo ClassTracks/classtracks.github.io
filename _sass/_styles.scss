@@ -304,7 +304,7 @@ section.homepage {
   	position: relative;
   	height: 300px;
   	width: 300px;
-  	background-color: rgba(69,186,155,0.75);
+  	background-color: rgba(69,186,155,0.9);
   	visibility: hidden;
   	padding: 10px;
   	border-radius: 150px;
@@ -313,11 +313,15 @@ section.homepage {
   		color: $white;
   	}
   }
+  #bio-wrap {
+  	height: 100px;
+  	margin-top: 75px;
+  }
   .headshot:hover {
-  	border-radius: 0px;
+  	//border-radius: 0px;
   	-webkit-transition: 0.5s;
   	.bio {
-  		border-radius: 0px;
+  		//border-radius: 0px;
   		visibility: visible;
   		-webkit-transition: 0.5s;
   	}
