@@ -158,11 +158,27 @@ section.homepage {
       li {
         display: inline-block;
         width: 150px;
+        max-height: 100px;
         vertical-align: middle;
         text-align: center;
         margin-right: 10px;
         margin-left: 10px;
+
+        img {
+        	-webkit-filter: grayscale(100%);
+        	filter: grayscale(100%);
+        }
+
+        a:hover {
+        	opacity: 1;
+      	  img {
+        	  -webkit-filter: grayscale(0%);
+        	  filter: grayscale(0%);
+          }
+        }
       }
+
+      
     }
     #emaze {
       img {
@@ -173,9 +189,6 @@ section.homepage {
       }
     }
     #breakfast {
-      img {
-        padding-top: 30px;
-      }
       p {
         margin-top: -13px;
       }
@@ -189,8 +202,6 @@ section.homepage {
     #lean-lab {
       img {
         padding-top: 30px;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
       }
     }
     .awards-container {
