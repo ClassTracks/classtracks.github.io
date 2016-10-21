@@ -2,8 +2,7 @@
 title: ClassTracks
 #email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blend your foreign language classroom.
-  Spend less time drilling, more time teaching. Transform your classroom with ClassTracks.
+  ClassTracks is an online vocabulary solution that triples the efficiency of vocabulary practice for English Language Learners and students with Limited English Proficiency.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.myclasstracks.com" # the base hostname & protocol for your site
 twitter_username: classtracks
