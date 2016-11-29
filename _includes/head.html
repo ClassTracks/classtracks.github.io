@@ -18,6 +18,22 @@
   <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
+  <!--<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>-->
+
+  <script type="text/javascript">
+  $(function() {
+    if (sessionStorage.getItem('warnockClosed') === 'true') {
+      $('.banner').hide();
+      $('section.homepage').css('margin-top','-175px');
+    }
+    $('.close-button').click(function() {
+      $('.banner').slideUp();
+      $('section.homepage').css('margin-top','-175px');
+      sessionStorage.setItem('warnockClosed', 'true');
+    });
+  });
+  </script>
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
