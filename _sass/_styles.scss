@@ -48,7 +48,7 @@ section .hero-title {
 section.homepage {
   position: relative;
   z-index: 99;
-  margin-top: -175px;
+  margin-top: -192px;
   @include media-query($on-palm) {
     margin-top: -220px;
   }
@@ -204,6 +204,26 @@ section.homepage {
         padding-top: 30px;
       }
     }
+    .logo {
+      img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+      &:hover {
+        a {
+          opacity: 1;
+        }
+        img {
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+
+          &#baltimore-magazine {
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+          }
+        }
+      }
+    }
     .awards-container {
       width: 100%;
       overflow-x: scroll;
@@ -308,6 +328,25 @@ section.homepage {
     max-width: 300px;
     overflow: hidden;
     border-radius: 150px;
+  }
+  .bio {
+  	background-color: $ct-grey-5;
+  	padding-top: 30px;
+  	padding-bottom: 10px;
+  	padding-left: 20px;
+  	p {
+  		text-align: left;
+  		color: $white;
+  	}
+  }
+  .arrow {
+  	height: 0;
+  	width: 0;
+  	margin-left: auto;
+  	margin-right: auto;
+  	border-left: 15px solid transparent;
+  	border-right: 15px solid transparent;
+  	border-bottom: 15px solid $ct-grey-5;
   }
   .timeline-wrap {
     height: 400px;
@@ -580,4 +619,32 @@ body.legal {
         line-height: 1.25;
       }
     }
+}
+
+// Warnock
+.warnock {
+  .content {
+    text-align: center;
+  }
+  .form {
+    margin-bottom: 50px;
+    text-align: center;
+    .col-md-6 {
+      padding: 0 5%;
+    }
+    form {
+      margin-top: 50px;
+    }
+    input, textarea {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    button {
+      background-color: $ct-turquoise;
+      color: $white;
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
 }
