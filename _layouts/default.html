@@ -14,5 +14,20 @@
 
     {% include footer.html %}
 
+    <script type="text/javascript">
+    $(function() {
+      if (sessionStorage.getItem('warnockClosed') === 'true') {
+        $('.banner').hide();
+        $('section.homepage').css('margin-top','-175px');
+      }
+      $('.close-button').click(function() {
+        $('.banner').slideUp();
+        $('section.homepage').animate({
+          'margin-top': '-175px'
+        }, 400)
+        sessionStorage.setItem('warnockClosed', 'true');
+      });
+    });
+  </script>
   </body>
 </html>
