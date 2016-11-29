@@ -213,6 +213,11 @@ section.homepage {
         filter: grayscale(100%);
         transition: filter 0.5s ease;
         -webkit-transition: filter 0.5s ease;
+
+        &#baltimore-magazine {
+            -webkit-filter: invert(0%);
+            filter: invert(0%);
+          }
       }
       &:hover {
         a {
