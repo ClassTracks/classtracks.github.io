@@ -20,7 +20,8 @@
         $('.banner').hide();
         $('section.homepage').css('margin-top','-175px');
       }
-      $('.close-button').click(function() {
+      $('.close-button').click(function(e) {
+        e.preventDefault();
         $('.banner').slideUp();
         $('section.homepage').animate({
           'margin-top': '-175px'
