@@ -18,11 +18,15 @@
       $(function() {
         if (sessionStorage.getItem('warnockClosed') === 'true') {
           $('.banner').hide();
+          $('.menu-icon').css('margin-top','-50px');
           $('section.homepage').css('margin-top','-175px');
         }
         $('.close-button').click(function(e) {
           e.preventDefault();
           $('.banner').slideUp();
+          $('.menu-icon').animate({
+            'margin-top': '-50px'
+          }, 400)
           $('section.homepage').animate({
             'margin-top': '-175px'
           }, 400)
@@ -39,7 +43,17 @@
           slidesToScroll: 1,
           arrows: false,
           fade: true,
-          asNavFor: '.timeline-nav'
+          infinite: false,
+          asNavFor: '.timeline-nav',
+          responsive: [
+            {
+              breakpoint: 748,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
         });
         $('.timeline-nav').slick({
           slidesToShow: 3,
@@ -47,7 +61,17 @@
           asNavFor: '.timeline-content',
           dots: false,
           centerMode: true,
-          focusOnSelect: true
+          focusOnSelect: true,
+          infinite: false,
+          responsive: [
+            {
+              breakpoint: 748,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
         });
       });
     </script>
