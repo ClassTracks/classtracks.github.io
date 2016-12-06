@@ -15,20 +15,65 @@
     {% include footer.html %}
 
     <script type="text/javascript">
-    $(function() {
-      if (sessionStorage.getItem('warnockClosed') === 'true') {
-        $('.banner').hide();
-        $('section.homepage').css('margin-top','-175px');
-      }
-      $('.close-button').click(function(e) {
-        e.preventDefault();
-        $('.banner').slideUp();
-        $('section.homepage').animate({
-          'margin-top': '-175px'
-        }, 400)
-        sessionStorage.setItem('warnockClosed', 'true');
+      $(function() {
+        if (sessionStorage.getItem('warnockClosed') === 'true') {
+          $('.banner').hide();
+          $('.menu-icon').css('margin-top','-50px');
+          $('section.homepage').css('margin-top','-175px');
+        }
+        $('.close-button').click(function(e) {
+          e.preventDefault();
+          $('.banner').slideUp();
+          $('.menu-icon').animate({
+            'margin-top': '-50px'
+          }, 400)
+          $('section.homepage').animate({
+            'margin-top': '-175px'
+          }, 400)
+          sessionStorage.setItem('warnockClosed', 'true');
+        });
       });
-    });
-  </script>
+    </script>
+    <script type="text/javascript" src="../slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.timeline-content').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          infinite: false,
+          asNavFor: '.timeline-nav',
+          responsive: [
+            {
+              breakpoint: 748,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+        $('.timeline-nav').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          asNavFor: '.timeline-content',
+          dots: false,
+          centerMode: true,
+          focusOnSelect: true,
+          infinite: false,
+          responsive: [
+            {
+              breakpoint: 748,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+      });
+    </script>
   </body>
 </html>
