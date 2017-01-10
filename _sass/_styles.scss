@@ -568,24 +568,94 @@ body.legal {
   }
 }
 
-// Get Started
-.get-started {
+// Pricing
+.pricing {
   text-align: center;
-  #why-classtracks {
-    p {
-      text-align: left;
+  #benefits {
+    h4 {
+      font-family: 'Lato';
     }
-    ol {
-      text-align: left;
+    h3 {
+      font-family: 'Lato';
+      line-height: 1.25;
+      margin-bottom: 45px;
     }
   }
-  #start-trial {
+  .why-classtracks {
+    display: inline-block;
+    vertical-align: top;
+    border: 3px solid;
+    max-width: 33%;
+    padding-left: 10px;
+    padding-right: 10px;
+    /*min-height: 302px;*/
+    margin-right: 10px;
+    em {
+      font-style: normal;
+    }
+    @include media-query($on-palm) {
+      display: block;
+      max-width: 100%;
+      margin-top: 10px;
+      margin-right:0;
+      min-height: none;
+    }
+  }
+  .purple {
+    border-color: $ct-purple;
+    h4, em {
+      color: $ct-purple;
+    }
+  }
+  .blue {
+    border-color: $ct-blue;
+    h4, em {
+      color: $ct-blue;
+    }
+  }
+  .yellow {
+    border-color: $ct-yellow;
+    margin-right: 0;
+    h4, em {
+      color: $ct-yellow-dark;
+    }
+  }
+  .more {
+    border: 3px $ct-turquoise solid;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    h4 {
+      color: $ct-turquoise;
+    }
+    @include media-query($on-palm) {
+      max-width: 100%;
+    }
+  }
+  .flex-container {
+    display: flex;
+    @include media-query($on-palm) {
+      display: block;
+    }
+  }
+  .start-trial {
+    h3 {
+      font-family: 'Lato';
+      font-weight: 700;
+    }
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 55px;
     background-color: rgb(249, 249, 249);
     button {
       color: $white;
+    }
+  }
+  #pricing-info {
+    p {
+      max-width: 716px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   .form {

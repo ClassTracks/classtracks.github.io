@@ -132,13 +132,14 @@
       padding-bottom: 0;
       background-color: #48CFAD;
       position: absolute;
-      top: 66px;
+      top: 16px;
       width: 100%;
     }
 
     .page-link {
       display: block;
-      padding: 10px 80px 10px 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       text-align: center;
       border-top: 1px solid rgba(255,255,255, .5);
       color: $white;
