@@ -1,0 +1,20 @@
+{
+  "name": "myclasstracks.com",
+  "version": "1.0.0",
+  "description": "ClassTracks is a trademarked name and all content, IP, and creative in this repository is a Copyright of ClassTracks and should not be used or copied without explicit permission from ClassTracks.",
+  "main": "index.html",
+  "scripts": {
+    "start": "jekyll serve --host 0.0.0.0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classtracks/classtracks.github.io.git"
+  },
+  "author": "ClassTracks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/classtracks/classtracks.github.io/issues"
+  },
+  "homepage": "https://github.com/classtracks/classtracks.github.io#readme"
+}
