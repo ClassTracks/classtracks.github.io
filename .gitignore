@@ -1,3 +1,4 @@
 _site
 .sass-cache
 .testinfo
+.DS_Store
